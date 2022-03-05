@@ -10,7 +10,7 @@ Visit the deployed website [here](https://django-code-buddy.herokuapp.com/).
 
 ## Table of Contents
 
-1. [User Experience (UX)](#user-experience-UX)
+1. [User Experience (UX)](#user-experience-ux)
     1. [Strategy](#strategy)
         1. [Project Goals](#project-goals)
         2. [User Goals](#user-goals)
@@ -105,7 +105,33 @@ According to the strategy table, not all features can be implemented in the firs
 
 ### Structure
 
+The website has been organized in a Hierarchical Tree Structure to ensure the site user navigates through the site effortlessly and intuitively. Here you can you can find the website map design.
+
+![Code Buddy website map](assets/readme_files/sitemap.jpg)
+
+* Header, footer and navigation bar are consistent through all pages.
+
+* Links and forms provide clear feedback to the site user.
+
+* The opportunity to add additional content to the website is provided for the site user once they register an account.
+
+* A 404-error page is available.
+
 ### Skeleton
+
+#### Wireframes
+
+[Balsamiq](https://balsamiq.com/) has been used to showcase the appearance of the site and display the placement of the different elements whitin the pages.
+
+Page | Desktop Version | Mobile Version
+--- | --- | ---
+Index / User Logged Out | ![Desktop index / user logged out wireframe image](assets/wireframes/index_dektop_logged_out.png) | ![Mobile index / user logged out wireframe image](assets/wireframes/index_mobile_logged_out.png)
+Sign Up | ![Desktop sign up wireframe image](assets/wireframes/signup_dektop.png) | ![Mobile sign up wireframe image](assets/wireframes/signup_mobile.png)
+Log In | ![Desktop log in wireframe image](assets/wireframes/login_dektop.png) | ![Mobile log in wireframe image](assets/wireframes/login_mobile.png)
+Index / User Logged In | ![Desktop index / user logged in wireframe image](assets/wireframes/index_dektop_logged_in.png) | ![Mobile index / user logged out wireframe image](assets/wireframes/index_mobile_logged_in.png)
+Ask Question | ![Desktop ask question wireframe image](assets/wireframes/ask_question_desktop.png) | ![Mobile ask question wireframe image](assets/wireframes/ask_question_mobile.png)
+Open Question | ![Desktop open question wireframe image](assets/wireframes/question_dektop.png) | ![Mobile open question wireframe image](assets/wireframes/question_mobile.png)
+Leave Reply | ![Desktop leave reply wireframe image](assets/wireframes/leave_reply_desktop.png) | ![Mobile leave reply wireframe image](assets/wireframes/leave_reply_mobile.png)
 
 ### Surface
 
