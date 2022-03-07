@@ -35,7 +35,7 @@ class Reply(models.Model):
         ordering = ['-created_on']
 
     def __str__(self):
-        return self.title
+        return f"Reply: {self.body} by {self.author}"
 
 
 class QuestionVote(models.Model):
