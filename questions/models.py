@@ -10,7 +10,7 @@ class Question(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_questions')
     content = models.TextField()
-    created_on = models.DateTimeField(auto_now=True)
+    created_on = models.DateTimeField(auto_now_add=True)
     last_updated = models.DateTimeField(auto_now=True)
     votes_score = models.IntegerField(default=0)
 
@@ -26,7 +26,7 @@ class Reply(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE, related_name='replies')
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_replies')
     body = models.TextField()
-    created_on = models.DateTimeField(auto_now=True)
+    created_on = models.DateTimeField(auto_now_add=True)
     last_updated = models.DateTimeField(auto_now=True)
     votes_count = models.IntegerField(default=0)
 
