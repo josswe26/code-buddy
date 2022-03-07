@@ -11,14 +11,14 @@ class Question(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_questions')
     content = models.TextField()
     created_on = models.DateTimeField(auto_now=True)
-    updated_on = models.DateTimeField(auto_now=True)
+    last_updated = models.DateTimeField(auto_now=True)
     votes_score = models.IntegerField(default=0)
 
     class Meta:
         ordering = ['-created_on']
 
-        def __str__(self):
-            return self.title
+    def __str__(self):
+        return self.title
 
 
 class Reply(models.Model):
@@ -27,14 +27,15 @@ class Reply(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_replies')
     body = models.TextField()
     created_on = models.DateTimeField(auto_now=True)
-    updated_on = models.DateTimeField(auto_now=True)
+    last_updated = models.DateTimeField(auto_now=True)
     votes_count = models.IntegerField(default=0)
 
     class Meta:
+        verbose_name_plural = 'replies'
         ordering = ['-created_on']
 
-        def __str__(self):
-            return self.title
+    def __str__(self):
+        return self.title
 
 
 class QuestionVote(models.Model):
