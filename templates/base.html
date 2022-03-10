@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,68 +21,77 @@
     <!--Link to Font Awesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- Link to style.css -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header class="bg-light">
+    <!-- Wraps the body content leaving out the footer -->
+    <div class="content-wrapper">
 
-        <!-- Navigation Bar -->
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <!-- Logo -->
-                <a class="navbar-brand" href="#"><i class="fas fa-laptop-code"></i> | code buddy</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarScroll">
-                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Register</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Login</a>
-                        </li>
-                    </ul>
+        <!-- Header -->
+        <header class="bg-light">
 
+            <!-- Navigation Bar -->
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <!-- Logo -->
+                    <a class="navbar-brand" href="#"><i class="fas fa-laptop-code"></i> | code buddy</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+                            style="--bs-scroll-height: 100px;">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Register</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Login</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Search field -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2 p-3">
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-secondary" type="submit">Search</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </nav>
 
-        <!-- Search field -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 offset-md-2 p-3">
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-secondary" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+        </header>
 
-    </header>
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
 
-    {% block content %}
-    <!-- Content Goes here -->
-    {% endblock content %}
+    </div>
 
     <!-- Footer -->
-    <footer class="py-3 fixed-bottom bg-dark text-white-50">
+    <footer class="py-3 bg-dark text-white-50">
 
         <div class="container">
 
             <!-- Footer Logo -->
             <div class="row">
                 <div class="col-12 border-bottom pb-3 mb-3">
-                        <a href="/" class="d-flex justify-content-center link-dark text-decoration-none text-white">
-                            <i class="fas fa-laptop-code p-1"></i> | code buddy
-                        </a>
+                    <a href="/" class="d-flex justify-content-center link-dark text-decoration-none text-white">
+                        <i class="fas fa-laptop-code p-1"></i> | code buddy
+                    </a>
                 </div>
             </div>
 
@@ -88,11 +99,11 @@
             <div class="row">
                 <div class="col-12 pb-1 mb-1">
                     <ul class="d-flex justify-content-center list-unstyled">
-                        <li class="px-2"><a class="text-white" href="https://facebook.com" target="_blank" rel="noopener"
-                                aria-label="Visit our Facebook page (opens on a new tab)"><i
+                        <li class="px-2"><a class="text-white" href="https://facebook.com" target="_blank"
+                                rel="noopener" aria-label="Visit our Facebook page (opens on a new tab)"><i
                                     class="fab fa-facebook"></i></a></li>
-                        <li class="px-2"><a class="text-white" href="https://instagram.com" target="_blank" rel="noopener"
-                                aria-label="Visit our Instagram page (opens on a new tab)"><i
+                        <li class="px-2"><a class="text-white" href="https://instagram.com" target="_blank"
+                                rel="noopener" aria-label="Visit our Instagram page (opens on a new tab)"><i
                                     class="fab fa-instagram"></i></a></li>
                         <li class="px-2"><a class="text-white" href="https://youtube.com" target="_blank" rel="noopener"
                                 aria-label="Visit our Youtube page (opens on a new tab)"><i
@@ -103,7 +114,7 @@
                     </ul>
                 </div>
             </div>
-
+            
             <div class="row">
                 <div class="col-12">
                     <p class="text-center">Copyright &copy; 2022</p>

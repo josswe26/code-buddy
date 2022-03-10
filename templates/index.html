@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid pt-4">
+
+    {% for question in question_list %}
+    <div class="row pb-3">
+
+        <!-- Rating buttons and score for question -->
+        <div class="col-2 col-md-1 offset-md-2 p-2 d-block-flex text-center">
+            <button class="no-border"><i class="fas fa-arrow-up"></i></button>
+            <h4 class="votes my-2">{{ question.votes_score }}</h4>
+            <button class="no-border"><i class="fas fa-arrow-down"></i></button>
+        </div>
+
+        <!-- Question -->
+        <div class="col-10 col-md-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{{ question.title }}</h5>
+                    <p class="text-muted">by {{ question.author }}</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated on {{ question.last_updated }}</small>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    {% endfor %}
+
+</div>
+
+<!-- Site Pagination -->
+{% if is_paginated %}
+<nav aria_label="Page navigation">
+    <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+        <li>
+            <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a>
+        </li>
+        {% endif %}
+        {% if page_obj.has_next %}
+        <li>
+            <a href="?page={{ page_obj.next_page_number }}" class="page-link">NEXT &raquo;</a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
+
+</div>
+
+{% endblock %}
