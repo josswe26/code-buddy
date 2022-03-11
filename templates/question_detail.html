@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid pt-4">
+
+    <div class="row">
+
+        <!-- Rating buttons and score for question -->
+        <div class="col-2 col-md-1 offset-md-2 p-2 d-block-flex text-center">
+            <button class="no-border"><i class="fas fa-arrow-up"></i></button>
+            <h4 class="votes my-2">{{ question.votes_score }}</h4>
+            <button class="no-border"><i class="fas fa-arrow-down"></i></button>
+        </div>
+
+        <!-- Question -->
+        <div class="col-10 col-md-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3 class="card-title">{{ question.title }}</h3>
+                    <p class="text-muted">by {{ question.author }}</p>
+                    <p class="card-text">{{ question.content }}</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated on {{ question.last_updated }}</small>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Display reply list-->
+<div class="container-fluid pt-4">
+
+    {% for reply in replies %}
+    <div class="row pb-3">
+
+        <!-- Rating buttons and score for reply -->
+        <div class="col-2 col-md-1 offset-md-2 p-2 d-block-flex text-center">
+            <button class="no-border"><i class="fas fa-arrow-up"></i></button>
+            <h4 class="votes my-2">{{ question.votes_score }}</h4>
+            <button class="no-border"><i class="fas fa-arrow-down"></i></button>
+        </div>
+
+        <!-- Display reply -->
+        <div class="col-10 col-md-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <p class="card-text">{{ reply.body }}</p>
+                    <p class="text-muted">by {{ reply.author }}</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated on {{ reply.last_updated }}</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+
+{% endblock %}

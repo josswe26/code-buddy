@@ -2,6 +2,7 @@
 
 {% block content %}
 
+<!-- Display question list -->
 <div class="container-fluid pt-4">
 
     {% for question in question_list %}
@@ -14,11 +15,13 @@
             <button class="no-border"><i class="fas fa-arrow-down"></i></button>
         </div>
 
-        <!-- Question -->
+        <!-- Display question-->
         <div class="col-10 col-md-6">
             <div class="card h-100">
                 <div class="card-body">
-                    <h5 class="card-title">{{ question.title }}</h5>
+                    <a href="{% url 'question_detail' question.slug %}" class="link-dark text-decoration-none">
+                        <h5 class="card-title">{{ question.title }}</h5>
+                    </a>
                     <p class="text-muted">by {{ question.author }}</p>
                 </div>
                 <div class="card-footer">
