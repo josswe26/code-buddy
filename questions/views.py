@@ -27,7 +27,6 @@ class QuestionListView(generic.ListView):
 
         if question_form.is_valid():
             question_form.instance.author = request.user
-            question_form.instance.author_id = request.user.id
             question_form.instance.slug = slugify(question_form.instance.title)
             question_form.save()
         else:
@@ -54,3 +53,21 @@ class QuestionDetailView(View):
                 'reply_form': ReplyForm()
             }
         )
+
+    def post(self, request, slug, *args, **kwargs):
+        """ Post method for ReplyForm """
+        queryset = Question.objects.all()
+        question = get_object_or_404(queryset, slug=slug)
+        replies = question.replies.all().order_by('created_on')
+
+        reply_form = ReplyForm(data=request.POST)
+
+        if reply_form.is_valid():
+            reply_form.instance.author = request.user
+            reply = reply_form.save(commit=False)
+            reply.question = question
+            reply_form.save()
+        else:
+            reply_form = ReplyForm()
+
+        return HttpResponseRedirect(reverse('question_detail', args=[slug]))
