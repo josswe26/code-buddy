@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'django_summernote',
+    'crispy_forms',
     'questions',
 ]
 
@@ -56,6 +57,8 @@ SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -84,6 +87,28 @@ TEMPLATES = [
         },
     },
 ]
+
+SUMMERNOTE_CONFIG = {
+
+    # Custom Summernote settings
+    'summernote': {
+
+        # Change editor size
+        'width': '100%',
+        'height': '300px',
+
+        # Custom editor toolbar
+        'toolbar': [
+                ['style', ['style']],
+                ['font', ['bold', 'underline']],
+                ['para', ['ul', 'ol']],
+                ['table', ['table']],
+                ['insert', ['link', 'picture']],
+                ['view', ['help']],
+            ],
+
+    },
+}
 
 WSGI_APPLICATION = 'code_buddy.wsgi.application'
 
