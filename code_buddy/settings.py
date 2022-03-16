@@ -100,7 +100,7 @@ SUMMERNOTE_CONFIG = {
         # Custom editor toolbar
         'toolbar': [
                 ['style', ['style']],
-                ['font', ['bold', 'underline']],
+                ['font', ['bold', 'italic']],
                 ['para', ['ul', 'ol']],
                 ['table', ['table']],
                 ['insert', ['link', 'picture']],
