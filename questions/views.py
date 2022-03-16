@@ -1,18 +1,26 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Question
+from .forms import QuestionForm
 
 
 class QuestionListView(generic.ListView):
-
+    """ List all questions and its content """
+    
     model = Question
     paginate_by = 10
 
     queryset = Question.objects.all().order_by('-created_on')
     template_name = 'index.html'
 
+    def get_context_data(self, **kwargs):
+        context = super(QuestionListView, self).get_context_data(**kwargs)
+        context['question_form'] = QuestionForm()
+        return context
+
 
 class QuestionDetailView(View):
+    """ Display detailed information about a specific question """
 
     def get(self, request, slug, *args, **kwargs):
 
