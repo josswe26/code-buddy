@@ -3,7 +3,7 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.utils.text import slugify
 from .models import Question
-from .forms import QuestionForm
+from .forms import QuestionForm, ReplyForm
 
 
 class QuestionListView(generic.ListView):
@@ -50,6 +50,7 @@ class QuestionDetailView(View):
             'question_detail.html',
             {
                 'question': question,
-                "replies": replies,
+                'replies': replies,
+                'reply_form': ReplyForm()
             }
         )
