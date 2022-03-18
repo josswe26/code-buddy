@@ -4,15 +4,15 @@
 
 {% load crispy_forms_tags %}
 
-<div class="container-fluid pt-4">
+<!-- Render when user is authenticated -->
+{% if user.is_authenticated %}
+<div class="container-fluid mt-4">
 
-    <!-- Render when user is authenticated -->
-    {% if user.is_authenticated %}
     <div class="row">
 
-        <div class="col-12 pb-3">
+        <div class="col-12">
 
-            <p class="text-center">
+            <p class="text-center mb-0">
                 <button class="btn btn-secondary no-border" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseQuestionForm" aria-expanded="false" aria-controls="collapseQuestionForm">
                     Ask Question <i class="fas fa-plus p-1"></i></button>
@@ -20,9 +20,9 @@
 
         </div>
 
-        <div class="col-md-6 offset-md-3 pb-3 mb-4 collapse" id="collapseQuestionForm">
+        <div class="col-md-6 offset-md-3 pt-4 collapse" id="collapseQuestionForm">
 
-            <div class="card card-body">
+            <div class="card card-body pb-0">
 
                 <h3 class="mb-3">Ask a Question</h3>
 
@@ -31,8 +31,8 @@
                     {{ question_form | crispy }}
                     {% csrf_token %}
 
-                    <div class="text-center mt-3">
-                        <button type="submit" class="btn btn-secondary mb-3">Submit</button>
+                    <div class="text-center my-4">
+                        <button type="submit" class="btn btn-secondary">Submit</button>
                     </div>
 
                 </form>
@@ -42,38 +42,41 @@
         </div>
 
     </div>
-    {% endif %}
+
 
 </div>
+{% endif %}
 
 <!-- Display all questions -->
-{% for question in question_list %}
-<div class="row pb-3">
+<div class="container-fluid mt-4">
 
-    <!-- Rating buttons and score for question -->
-    <div class="col-2 col-md-1 offset-md-2 p-2 d-block-flex text-center">
-        <button class="btn btn-secondary"><i class="fas fa-arrow-up"></i></button>
-        <h4 class="votes my-1">{{ question.votes_score }}</h4>
-        <button class="btn btn-secondary"><i class="fas fa-arrow-down"></i></button>
-    </div>
+    {% for question in question_list %}
+    <div class="row mb-3">
 
-    <!-- Display question information-->
-    <div class="col-10 col-md-6">
-        <div class="card h-100">
-            <div class="card-body">
-                <a href="{% url 'question_detail' question.slug %}" class="link-dark text-decoration-none">
-                    <h5 class="card-title">{{ question.title }}</h5>
-                </a>
-                <p class="text-muted">by {{ question.author }}</p>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">Last updated on {{ question.last_updated }}</small>
+        <!-- Rating buttons and score for question -->
+        <div class="col-2 col-md-1 offset-md-2 p-2 d-block-flex text-center">
+            <button class="btn btn-secondary"><i class="fas fa-arrow-up"></i></button>
+            <h4 class="votes my-1">{{ question.votes_score }}</h4>
+            <button class="btn btn-secondary"><i class="fas fa-arrow-down"></i></button>
+        </div>
+
+        <!-- Display question information-->
+        <div class="col-10 col-md-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <a href="{% url 'question_detail' question.slug %}" class="link-dark text-decoration-none">
+                        <h5 class="card-title">{{ question.title }}</h5>
+                    </a>
+                    <p class="text-muted mb-0">by {{ question.author }}</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated on {{ question.last_updated }}</small>
+                </div>
             </div>
         </div>
-    </div>
 
-</div>
-{% endfor %}
+    </div>
+    {% endfor %}
 
 </div>
 

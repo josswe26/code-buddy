@@ -4,7 +4,7 @@
 
 {% load crispy_forms_tags %}
 
-<div class="container-fluid pt-4">
+<div class="container-fluid my-4">
 
     <div class="row">
 
@@ -31,13 +31,17 @@
 
     </div>
 
-    <!-- Render when user is authenticated -->
-    {% if user.is_authenticated %}
+</div>
+
+<!-- Render when user is authenticated -->
+{% if user.is_authenticated %}
+<div class="container-fluid mb-4">
+
     <div class="row">
 
-        <div class="col-12 pt-4 pb-3">
+        <div class="col-12">
 
-            <p class="text-center">
+            <p class="text-center m-0">
                 <button class="btn btn-secondary no-border" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseQuestionForm" aria-expanded="false" aria-controls="collapseQuestionForm">
                     Leave Reply <i class="fas fa-plus p-1"></i></button>
@@ -45,9 +49,9 @@
 
         </div>
 
-        <div class="col-md-6 offset-md-3 pb-3 mb-4 collapse" id="collapseQuestionForm">
+        <div class="col-md-6 offset-md-3 mt-4 collapse" id="collapseQuestionForm">
 
-            <div class="card card-body">
+            <div class="card card-body pb-0">
 
                 <h3 class="mb-3">Leave a Reply</h3>
 
@@ -56,8 +60,8 @@
                     {{ reply_form | crispy }}
                     {% csrf_token %}
 
-                    <div class="text-center mt-3">
-                        <button type="submit" class="btn btn-secondary mb-3">Submit</button>
+                    <div class="text-center my-4">
+                        <button type="submit" class="btn btn-secondary">Submit</button>
                     </div>
 
                 </form>
@@ -67,15 +71,15 @@
         </div>
 
     </div>
-    {% endif %}
 
 </div>
+{% endif %}
 
 <!-- Display reply list-->
 <div class="container-fluid">
 
     {% for reply in replies %}
-    <div class="row pb-3">
+    <div class="row mb-3">
 
         <!-- Rating buttons and score for reply -->
         <div class="col-2 col-md-1 offset-md-2 p-2 d-block-flex text-center">
@@ -89,7 +93,7 @@
             <div class="card h-100">
                 <div class="card-body">
                     <p class="card-text">{{ reply.body | safe }}</p>
-                    <p class="text-muted">by {{ reply.author }}</p>
+                    <p class="text-muted mb-0">by {{ reply.author }}</p>
                 </div>
                 <div class="card-footer">
                     <small class="text-muted">Last updated on {{ reply.last_updated }}</small>

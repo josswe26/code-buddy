@@ -1,6 +1,6 @@
 /* Stick footer to the bottom */
 .content-wrapper {
-    min-height: calc(100vh - 177px);
+    min-height: calc(100vh - 201px);
 }
 
 
