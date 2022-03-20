@@ -102,8 +102,13 @@
                     <p class="card-text">{{ reply.body | safe }}</p>
                     <p class="text-muted mb-0">by {{ reply.author }}</p>
                 </div>
-                <div class="card-footer">
+                <div class="card-footer d-flex justify-content-between">
                     <small class="text-muted">Last updated on {{ reply.last_updated }}</small>
+                    {% if request.user == reply.author %}
+                    <div>
+                        <a class="btn btn-secondary" href="{% url 'edit_reply' reply.id %}">Edit</a>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
