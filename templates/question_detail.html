@@ -29,7 +29,7 @@
                     {% if request.user == question.author %}
                     <div>
                         <a class="btn btn-secondary" href="{% url 'edit_question' question.id %}">Edit</a>
-                        <a class="btn btn-dark">Delete</a>
+                        <a class="btn btn-dark" href="{% url 'delete_question' question.id %}">Delete</a>
                     </div>
                     {% endif %}
                 </div>

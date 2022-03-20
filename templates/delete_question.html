@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<div class="container-fluid my-4">
+
+    <div class="row">
+
+        <div class="col-md-6 offset-md-3 pt-3">
+            <div class="card card-body pb-0">
+
+                <h3 class="mb-3">Delete Question</h3>
+
+                <!-- Edit Question form -->
+                <form method="POST" action="{% url 'delete_question' question.id %}">
+                    {% csrf_token %}
+
+                    <p>Are you sure you want to delete the following question?</p>
+                    <strong>{{ question.title }}</strong>
+
+                    <div class="text-center my-4">
+                        <button type="submit" class="btn btn-secondary">Yes</button>
+                        <a class="btn btn-dark" href="{% url 'home' %}">No</a>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
