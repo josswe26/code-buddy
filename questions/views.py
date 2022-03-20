@@ -12,7 +12,7 @@ class QuestionListView(generic.ListView):
     model = Question
     paginate_by = 10
 
-    queryset = Question.objects.all().order_by('-created_on')
+    queryset = Question.objects.all().order_by('-last_updated')
     template_name = 'index.html'
 
     def get_context_data(self, **kwargs):
@@ -42,7 +42,7 @@ class QuestionDetailView(View):
         """ Get question information and return data for rendering """
         queryset = Question.objects.all()
         question = get_object_or_404(queryset, slug=slug)
-        replies = question.replies.all().order_by('created_on')
+        replies = question.replies.all().order_by('last_updated')
         
         return render(
             request,
@@ -58,7 +58,6 @@ class QuestionDetailView(View):
         """ Post method for ReplyForm """
         queryset = Question.objects.all()
         question = get_object_or_404(queryset, slug=slug)
-        replies = question.replies.all().order_by('created_on')
 
         reply_form = ReplyForm(data=request.POST)
 
