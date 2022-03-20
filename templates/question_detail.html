@@ -107,6 +107,7 @@
                     {% if request.user == reply.author %}
                     <div>
                         <a class="btn btn-secondary" href="{% url 'edit_reply' reply.id %}">Edit</a>
+                        <a class="btn btn-dark" href="{% url 'delete_reply' reply.id %}">Delete</a>
                     </div>
                     {% endif %}
                 </div>
