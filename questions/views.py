@@ -94,7 +94,7 @@ class QuestionEditView(View):
         )
 
     def post(self, request, id, *args, **kwargs):
-        """ Updated question information """
+        """ Update question information """
         queryset = Question.objects.all()
         question = get_object_or_404(queryset, id=id)
 
@@ -110,3 +110,28 @@ class QuestionEditView(View):
 
         return HttpResponseRedirect(reverse('home'))
 
+
+class QuestionDeleteView(View):
+    """ View to delete a specific question"""
+
+    def get(self, request, id, *args, **kwargs):
+        """ Get question information and return form to delete """
+        queryset = Question.objects.all()
+        question = get_object_or_404(queryset, id=id)
+
+        return render(
+            request,
+            'delete_question.html',
+            {
+                'question': question,
+            }
+        )
+
+    def post(self, request, id, *args, **kwargs):
+        """ Delete question """
+        queryset = Question.objects.all()
+        question = get_object_or_404(queryset, id=id)
+
+        question.delete()
+
+        return HttpResponseRedirect(reverse('home'))
