@@ -71,3 +71,42 @@ class QuestionDetailView(View):
             reply_form = ReplyForm()
 
         return HttpResponseRedirect(reverse('question_detail', args=[slug]))
+
+
+class QuestionEditView(View):
+    """ View to edit a specific question"""
+
+    def get(self, request, id, *args, **kwargs):
+        """ Get question information and return form to edit """
+        queryset = Question.objects.all()
+        question = get_object_or_404(queryset, id=id)
+
+        data = {'title': question.title, 'content': question.content}
+        edit_form = QuestionForm(initial=data)
+
+        return render(
+            request,
+            'edit_question.html',
+            {
+                'question': question,
+                'edit_form': edit_form
+            }
+        )
+
+    def post(self, request, id, *args, **kwargs):
+        """ Updated question information """
+        queryset = Question.objects.all()
+        question = get_object_or_404(queryset, id=id)
+
+        edit_form = QuestionForm(data=request.POST)
+
+        if edit_form.is_valid():
+            question.title = edit_form.cleaned_data.get("title")
+            question.content = edit_form.cleaned_data.get("title")
+            question.slug = slugify(edit_form.cleaned_data.get("title"))
+            question.save()
+        else:
+            edit_form = QuestionForm()
+
+        return HttpResponseRedirect(reverse('home'))
+
