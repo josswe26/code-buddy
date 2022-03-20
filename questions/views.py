@@ -102,7 +102,7 @@ class QuestionEditView(View):
 
         if edit_form.is_valid():
             question.title = edit_form.cleaned_data.get("title")
-            question.content = edit_form.cleaned_data.get("title")
+            question.content = edit_form.cleaned_data.get("content")
             question.slug = slugify(edit_form.cleaned_data.get("title"))
             question.save()
         else:
