@@ -173,3 +173,29 @@ class ReplyEditView(View):
         return HttpResponseRedirect(reverse('question_detail', args=[reply.question.slug]))
 
 
+class ReplyDeleteView(View):
+    """ View to delete a specific reply"""
+
+    def get(self, request, id, *args, **kwargs):
+        """ Get reply information and return form to delete """
+        queryset = Reply.objects.all()
+        reply = get_object_or_404(queryset, id=id)
+        question_slug = reply.question.slug
+
+        return render(
+            request,
+            'delete_reply.html',
+            {
+                'reply': reply,
+            }
+        )
+
+    def post(self, request, id, *args, **kwargs):
+        """ Delete reply """
+        queryset = Reply.objects.all()
+        reply = get_object_or_404(queryset, id=id)
+        slug = reply.question.slug
+
+        reply.delete()
+
+        return HttpResponseRedirect(reverse('question_detail', args=[slug]))
