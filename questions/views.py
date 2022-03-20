@@ -135,3 +135,41 @@ class QuestionDeleteView(View):
         question.delete()
 
         return HttpResponseRedirect(reverse('home'))
+
+
+class ReplyEditView(View):
+    """ View to edit a specific reply"""
+
+    def get(self, request, id, *args, **kwargs):
+        """ Get reply information and return form to edit """
+        queryset = Reply.objects.all()
+        reply = get_object_or_404(queryset, id=id)
+
+        data = {'body': reply.body}
+        edit_form = ReplyForm(initial=data)
+
+        return render(
+            request,
+            'edit_reply.html',
+            {
+                'reply': reply,
+                'edit_form': edit_form
+            }
+        )
+
+    def post(self, request, id, *args, **kwargs):
+        """ Update reply information """
+        queryset = Reply.objects.all()
+        reply = get_object_or_404(queryset, id=id)
+
+        edit_form = ReplyForm(data=request.POST)
+
+        if edit_form.is_valid():
+            reply.body = edit_form.cleaned_data.get("body")
+            reply.save()
+        else:
+            edit_form = ReplyForm()
+
+        return HttpResponseRedirect(reverse('question_detail', args=[reply.question.slug]))
+
+
