@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Display search results -->
+<div class="container-fluid mt-4">
+
+    <div class="row">
+        <div class="col-10 offset-2 col-md-6 offset-md-3">
+            <h4>Search Results for {{ searched }}</h4>
+        </div>
+    </div>
+
+    {% for question in questions %}
+    <div class="row my-3">
+
+        <!-- Rating buttons and score for question -->
+        <div class="col-2 col-md-1 offset-md-2 p-2 d-block-flex text-center">
+            <button class="btn btn-secondary"><i class="fas fa-arrow-up"></i></button>
+            <h4 class="votes my-1">{{ question.votes_score }}</h4>
+            <button class="btn btn-secondary"><i class="fas fa-arrow-down"></i></button>
+        </div>
+
+        <!-- Display question information-->
+        <div class="col-10 col-md-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <a href="{% url 'question_detail' question.slug %}" class="link-dark text-decoration-none">
+                        <h5 class="card-title">{{ question.title }}</h5>
+                    </a>
+                    <p class="text-muted mb-0">by {{ question.author }}</p>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <small class="text-muted">Last updated on {{ question.last_updated }}</small>
+                    <!-- Show Edit and Delete buttons on questions created by the user -->
+                    {% if request.user == question.author %}
+                    <div>
+                        <a class="btn btn-secondary" href="{% url 'edit_question' question.id %}">Edit</a>
+                        <a class="btn btn-dark" href="{% url 'delete_question' question.id %}">Delete</a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+    {% endfor %}
+
+</div>
+
+<!-- Site Pagination -->
+{% if is_paginated %}
+<nav aria_label="Page navigation">
+    <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+        <li>
+            <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a>
+        </li>
+        {% endif %}
+        {% if page_obj.has_next %}
+        <li>
+            <a href="?page={{ page_obj.next_page_number }}" class="page-link">NEXT &raquo;</a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
+
+</div>
+
+{% endblock %}
