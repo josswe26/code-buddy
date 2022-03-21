@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, reverse
+from django.contrib.postgres.search import SearchVector
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.utils.text import slugify
@@ -100,9 +101,9 @@ class QuestionEditView(View):
         edit_form = QuestionForm(data=request.POST)
 
         if edit_form.is_valid():
-            question.title = edit_form.cleaned_data.get("title")
-            question.content = edit_form.cleaned_data.get("content")
-            question.slug = slugify(edit_form.cleaned_data.get("title"))
+            question.title = edit_form.cleaned_data.get('title')
+            question.content = edit_form.cleaned_data.get('content')
+            question.slug = slugify(edit_form.cleaned_data.get('title'))
             question.save()
         else:
             edit_form = QuestionForm()
@@ -164,7 +165,7 @@ class ReplyEditView(View):
         edit_form = ReplyForm(data=request.POST)
 
         if edit_form.is_valid():
-            reply.body = edit_form.cleaned_data.get("body")
+            reply.body = edit_form.cleaned_data.get('body')
             reply.save()
         else:
             edit_form = ReplyForm()
@@ -198,3 +199,20 @@ class ReplyDeleteView(View):
         reply.delete()
 
         return HttpResponseRedirect(reverse('question_detail', args=[slug]))
+
+
+class SearchListView(View):
+    """ List view for questions matching a search """
+
+    def post(self, request):
+        """ Search questions matching the search """
+       
+        searched = request.POST['searched']
+        questions = Question.objects.annotate(
+            search=SearchVector('title', 'content')).filter(search=searched)
+
+        return render(request,
+        'search_results.html',
+        {'searched': searched,
+        'questions': questions}
+        )
