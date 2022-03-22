@@ -28,7 +28,7 @@ class Reply(models.Model):
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     last_updated = models.DateTimeField(auto_now=True)
-    votes_count = models.IntegerField(default=0)
+    votes_score = models.IntegerField(default=0)
 
     class Meta:
         verbose_name_plural = 'replies'
