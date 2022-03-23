@@ -15,7 +15,7 @@
                 <input type="hidden" name="location" value="question_detail">
                 <button class="btn btn-secondary" name="vote_score" value="1" aria-label="Upvote question"><i
                         class="fas fa-arrow-up"></i></button>
-            <h4 class="votes my-1">{{ question.votes_score }}</h4>
+                <h4 class="votes my-1">{{ question.votes_score }}</h4>
                 <button class="btn btn-secondary" name="vote_score" value="-1" aria-label="Downvote question"><i
                         class="fas fa-arrow-down"></i></button>
             </form>
@@ -89,9 +89,14 @@
         <!-- Rating buttons and score for reply -->
         <div class="col-2 col-md-1 offset-md-2 p-2 d-block-flex text-center">
             {% if user.is_authenticated %}
-            <button class="btn btn-secondary"><i class="fas fa-arrow-up" aria-label="upvote question"></i></button>
-            <h4 class="votes my-1">{{ question.votes_score }}</h4>
-            <button class="btn btn-secondary"><i class="fas fa-arrow-down" aria-label="downvote question"></i></button>
+            <form action="{% url 'vote_reply' reply.id %}" method="post">
+                {% csrf_token %}
+                <button class="btn btn-secondary" name="vote_score" value="1" aria-label="Upvote reply"><i
+                        class="fas fa-arrow-up"></i></button>
+                <h4 class="votes my-1">{{ reply.votes_score }}</h4>
+                <button class="btn btn-secondary" name="vote_score" value="-1" aria-label="Downvote reply"><i
+                        class="fas fa-arrow-down"></i></button>
+            </form>
             {% else %}
             <h4 class="votes my-1">{{ question.votes_score }}</h4>
             <p class="my-1 text-center">votes</p>
