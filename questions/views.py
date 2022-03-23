@@ -3,7 +3,8 @@ from django.contrib.postgres.search import SearchVector
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.utils.text import slugify
-from .models import Question, Reply
+from django.db.models import Sum
+from .models import Question, Reply, QuestionVote, ReplyVote
 from .forms import QuestionForm, ReplyForm
 
 
@@ -216,3 +217,35 @@ class SearchListView(View):
         {'searched': searched,
         'questions': questions}
         )
+
+
+class VoteQuestion(View):
+    """ Vote Queston view """
+
+    def post(self, request, id):
+        """ Register question votes """
+
+        vote = QuestionVote()
+        question = get_object_or_404(Question, id=id)
+
+        score = request.POST.get('vote_score')
+
+        vote, created = QuestionVote.objects.update_or_create(
+            voter=request.user,
+            question=question,
+            defaults={'score': score},
+        )
+
+        vote.save()
+
+        total_score = QuestionVote.objects.filter(question=question).aggregate(Sum('score'))
+
+        question.votes_score = total_score['score__sum']
+        question.save()
+
+        if request.POST.get('location') == 'home':
+            return HttpResponseRedirect(reverse('home'))
+
+        if request.POST.get('location') == 'question_detail':
+            return HttpResponseRedirect(reverse('question_detail', args=[question.slug]))
+
