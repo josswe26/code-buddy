@@ -230,18 +230,25 @@ class VoteQuestion(View):
 
         score = request.POST.get('vote_score')
 
-        vote, created = QuestionVote.objects.update_or_create(
-            voter=request.user,
-            question=question,
-            defaults={'score': score},
-        )
+        existing_vote = QuestionVote.objects.filter(voter=request.user, score=score, question=question)
 
-        vote.save()
-
-        total_score = QuestionVote.objects.filter(question=question).aggregate(Sum('score'))
-
-        question.votes_score = total_score['score__sum']
-        question.save()
+        if existing_vote:
+            existing_vote.delete()
+        else:
+            vote, created = QuestionVote.objects.update_or_create(
+                voter=request.user,
+                question=question,
+                defaults={'score': score},
+            )
+            vote.save()
+            
+        try:
+            total_score = QuestionVote.objects.filter(question=question).aggregate(Sum('score'))
+            question.votes_score = total_score['score__sum']
+            question.save()
+        except:
+            question.votes_score = 0
+            question.save()
 
         if request.POST.get('location') == 'home':
             return HttpResponseRedirect(reverse('home'))
@@ -261,17 +268,24 @@ class VoteReply(View):
 
         score = request.POST.get('vote_score')
 
-        vote, created = ReplyVote.objects.update_or_create(
-            voter=request.user,
-            reply=reply,
-            defaults={'score': score},
-        )
+        existing_vote = ReplyVote.objects.filter(voter=request.user, score=score, reply=reply)
 
-        vote.save()
+        if existing_vote:
+            existing_vote.delete()
+        else:
+            vote, created = ReplyVote.objects.update_or_create(
+                voter=request.user,
+                reply=reply,
+                defaults={'score': score},
+            )
+            vote.save()
 
-        total_score = ReplyVote.objects.filter(reply=reply).aggregate(Sum('score'))
-
-        reply.votes_score = total_score['score__sum']
-        reply.save()
+        try:
+            total_score = ReplyVote.objects.filter(reply=reply).aggregate(Sum('score'))
+            reply.votes_score = total_score['score__sum']
+            reply.save()
+        except:
+            reply.votes_score = 0
+            reply.save()
 
         return HttpResponseRedirect(reverse('question_detail', args=[reply.question.slug]))
