@@ -1,10 +1,56 @@
-/* Stick footer to the bottom */
-.content-wrapper {
-    min-height: calc(100vh - 201px);
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400&family=Quicksand:wght@700&family=Roboto:wght@500&display=swap');
+
+
+/* Fonts */
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #FFFFFD;
+    color: #253a47;
+}
+
+h3, h4, h5 {
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo, .votes {
+    font-family: 'Quicksand', sans-serif;
 }
 
 
-/* Style forms */
+/* Colors */
+
+.bg-color-ligth {
+    background-color: #E9EDE9;
+}
+
+.link-color-blue {
+    color: #253A47;
+}
+
+.link-color-blue:hover {
+    color: #66A3BB;
+}
+
+.link-color-light {
+    color: #E9EDE9;
+}
+
+.link-color-light:hover {
+    color: #66A3BB;
+}
+
+
+/* Stick footer to the bottom */
+
+.content-wrapper {
+    min-height: calc(100vh - 225px);
+}
+
+
+/* Forms */
+
 input[type=text], input[type=password], input[type=email], textarea {
     display: block;
     width: 100%;
@@ -12,10 +58,10 @@ input[type=text], input[type=password], input[type=email], textarea {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
-    background-color: #fff;
+    color: #253A47;
+    background-color: #FFFFFD;
     background-clip: padding-box;
-    border: 1px solid #ced4da;
+    border: 1px solid #E9EDE9;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -25,4 +71,62 @@ input[type=text], input[type=password], input[type=email], textarea {
 
 form > div {
     margin-bottom: 1rem;
+}
+
+
+/* Header */ 
+
+.navbar-brand {
+    font-size: 1.75rem;
+    color: #253A47;
+}
+
+.navbar-brand:hover {
+    color: #253A47;
+}
+
+.navbar {
+    font-size: 1.25em;
+}
+
+.nav-link {
+    color: #66A3BB; 
+}
+
+.nav-link:hover {
+    color: #253A47; 
+}
+
+.form-control {
+    color: #253A47;
+    background-color: #FFFFFD;
+    border: 1px solid #E9EDE9;
+}
+
+.form-control:focus {
+    color: #253A47;
+    background-color: #FFFFFD;
+    border-color: #253A47;
+}
+
+.btn--main {
+    color: #E9EDE9;
+    background-color: #253A47; 
+    border-color: #253A47;
+}
+
+.btn--main:hover {
+    color: #66A3BB;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #253A47;
+    color: #E9EDE9;
+}
+
+footer a {
+    font-size: 1.5rem;
 }

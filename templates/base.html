@@ -31,13 +31,13 @@
     <div class="content-wrapper">
 
         <!-- Header -->
-        <header class="bg-light">
+        <header class="bg-color-ligth sticky-top">
 
             <!-- Navigation Bar -->
-            <nav class="navbar navbar-expand-lg navbar-light">
+            <nav class="navbar navbar-expand-lg px-2">
                 <div class="container-fluid">
                     <!-- Logo -->
-                    <a class="navbar-brand pl-3" href="{% url 'home' %}"><i class="fas fa-laptop-code"></i> | code
+                    <a class="logo navbar-brand pl-3" href="{% url 'home' %}"><i class="fas fa-laptop-code"></i> | code
                         buddy</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
@@ -48,7 +48,7 @@
                         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
                             style="--bs-scroll-height: 100px;">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                                <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
                             </li>
                             {% if user.is_authenticated %}
                             <li class="nav-item">
@@ -76,7 +76,7 @@
                             {% csrf_token %}
                             <input class="form-control me-2" type="search" placeholder="Search Question"
                                 aria-label="Search" name="searched">
-                            <button class="btn btn-secondary" type="submit">Search</button>
+                            <button class="btn btn--main" type="submit">Search</button>
                         </form>
                     </div>
                 </div>
@@ -91,14 +91,14 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white-50 py-4">
+    <footer class="py-4">
 
         <div class="container">
 
             <!-- Footer Logo -->
             <div class="row">
-                <div class="col-12 border-bottom pb-4">
-                    <a href="{% url 'home' %}" class="d-flex justify-content-center text-decoration-none text-white">
+                <div class="logo col-12 border-bottom pb-4">
+                    <a href="{% url 'home' %}" class="d-flex justify-content-center text-decoration-none link-color-light">
                         <i class="fas fa-laptop-code p-1"></i> | code buddy
                     </a>
                 </div>
@@ -108,16 +108,16 @@
             <div class="row">
                 <div class="col-12">
                     <ul class="d-flex justify-content-center list-unstyled mt-4">
-                        <li class="px-2"><a class="text-white" href="https://facebook.com" target="_blank"
+                        <li class="mx-2 px-1"><a class="link-color-light" href="https://facebook.com" target="_blank"
                                 rel="noopener" aria-label="Visit our Facebook page (opens on a new tab)"><i
                                     class="fab fa-facebook"></i></a></li>
-                        <li class="px-2"><a class="text-white" href="https://instagram.com" target="_blank"
+                        <li class="mx-2 px-1"><a class="link-color-light" href="https://instagram.com" target="_blank"
                                 rel="noopener" aria-label="Visit our Instagram page (opens on a new tab)"><i
                                     class="fab fa-instagram"></i></a></li>
-                        <li class="px-2"><a class="text-white" href="https://youtube.com" target="_blank" rel="noopener"
+                        <li class="mx-2 px-1"><a class="link-color-light" href="https://youtube.com" target="_blank" rel="noopener"
                                 aria-label="Visit our Youtube page (opens on a new tab)"><i
                                     class="fab fa-youtube"></i></a></li>
-                        <li class="px-2"><a class="text-white" href="https://twitter.com" target="_blank" rel="noopener"
+                        <li class="mx-2 px-1"><a class="link-color-light" href="https://twitter.com" target="_blank" rel="noopener"
                                 aria-label="Visit our Twitter page (opens on a new tab)"><i
                                     class="fab fa-twitter"></i></a></li>
                     </ul>
