@@ -13,10 +13,10 @@
             <form action="{% url 'vote_question' question.id %}" method="post">
                 {% csrf_token %}
                 <input type="hidden" name="location" value="question_detail">
-                <button class="btn btn-secondary" name="vote_score" value="1" aria-label="Upvote question"><i
+                <button class="btn btn--secondary" name="vote_score" value="1" aria-label="Upvote question"><i
                         class="fas fa-arrow-up"></i></button>
                 <h4 class="votes my-1">{{ question.votes_score }}</h4>
-                <button class="btn btn-secondary" name="vote_score" value="-1" aria-label="Downvote question"><i
+                <button class="btn btn--secondary" name="vote_score" value="-1" aria-label="Downvote question"><i
                         class="fas fa-arrow-down"></i></button>
             </form>
             {% else %}
@@ -38,8 +38,10 @@
                     <!-- Show Edit and Delete buttons on questions created by the user -->
                     {% if request.user == question.author %}
                     <div>
-                        <a class="btn btn-secondary" href="{% url 'edit_question' question.id %}">Edit</a>
-                        <a class="btn btn-dark" href="{% url 'delete_question' question.id %}">Delete</a>
+                        <a class="btn btn--main mt-1" href="{% url 'edit_question' question.id %}"
+                            aria-label="Edit question"><i class="fas fa-edit"></i></a>
+                        <a class="btn btn--secondary mt-1" href="{% url 'delete_question' question.id %}"
+                            aria-label="Delete question"><i class="fas fa-trash-alt"></i></a>
                     </div>
                     {% endif %}
                 </div>
@@ -55,7 +57,7 @@
         <div class="col-12">
 
             <p class="text-center m-0">
-                <button class="btn btn-secondary no-border" type="button" data-bs-toggle="collapse"
+                <button class="btn btn--main no-border" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseQuestionForm" aria-expanded="false" aria-controls="collapseQuestionForm">
                     Leave Reply <i class="fas fa-plus p-1"></i></button>
             </p>
@@ -71,7 +73,7 @@
                     {% csrf_token %}
 
                     <div class="text-center my-4">
-                        <button type="submit" class="btn btn-secondary">Submit</button>
+                        <button type="submit" class="btn btn--main">Submit</button>
                     </div>
                 </form>
             </div>
@@ -91,10 +93,10 @@
             {% if user.is_authenticated %}
             <form action="{% url 'vote_reply' reply.id %}" method="post">
                 {% csrf_token %}
-                <button class="btn btn-secondary" name="vote_score" value="1" aria-label="Upvote reply"><i
+                <button class="btn btn--secondary" name="vote_score" value="1" aria-label="Upvote reply"><i
                         class="fas fa-arrow-up"></i></button>
                 <h4 class="votes my-1">{{ reply.votes_score }}</h4>
-                <button class="btn btn-secondary" name="vote_score" value="-1" aria-label="Downvote reply"><i
+                <button class="btn btn--secondary" name="vote_score" value="-1" aria-label="Downvote reply"><i
                         class="fas fa-arrow-down"></i></button>
             </form>
             {% else %}
@@ -114,8 +116,10 @@
                     <small class="text-muted">Last updated on {{ reply.last_updated }}</small>
                     {% if request.user == reply.author %}
                     <div>
-                        <a class="btn btn-secondary" href="{% url 'edit_reply' reply.id %}">Edit</a>
-                        <a class="btn btn-dark" href="{% url 'delete_reply' reply.id %}">Delete</a>
+                        <a class="btn btn--main" href="{% url 'edit_reply' reply.id %}"
+                            aria-label="Edit question"><i class="fas fa-edit"></i></a>
+                        <a class="btn btn--secondary" href="{% url 'delete_reply' reply.id %}" aria-label="Delete question"><i
+                                class="fas fa-trash-alt"></i></a>
                     </div>
                     {% endif %}
                 </div>

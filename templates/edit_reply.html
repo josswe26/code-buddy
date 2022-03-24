@@ -7,9 +7,7 @@
 {% if request.user == reply.author %}
 
 <div class="container-fluid my-4">
-
     <div class="row">
-
         <div class="col-md-6 offset-md-3 pt-3">
             <div class="card card-body pb-0">
 
@@ -21,32 +19,25 @@
                     {% csrf_token %}
 
                     <div class="text-center my-4">
-                        <button type="submit" class="btn btn-secondary">Submit</button>
+                        <button type="submit" class="btn btn--main">Submit</button>
                     </div>
-
                 </form>
 
             </div>
         </div>
-
     </div>
-
 </div>
 
 {% else %}
 
 <div class="container-fluid my-4">
-
     <div class="row">
-
         <div class="col-md-6 offset-md-3 text-center pt-3">
 
             <h3 class="mb-3">Sorry buddy, you are not allowed to access this page.</h3>
 
         </div>
-
     </div>
-
 </div>
 
 {% endif %}
