@@ -33,10 +33,10 @@
                     <small class="text-muted">Last updated on {{ question.last_updated }}</small>
                     <!-- Show Edit and Delete buttons on questions created by the user -->
                     {% if request.user == question.author %}
-                    <div>
-                        <a class="btn btn--main mt-1" href="{% url 'edit_question' question.id %}"
+                    <div class="d-flex justify-content-center">
+                        <a class="btn btn--main btn--icon mx-1" href="{% url 'edit_question' question.id %}"
                             aria-label="Edit question"><i class="fas fa-edit"></i></a>
-                        <a class="btn btn--secondary mt-1" href="{% url 'delete_question' question.id %}"
+                        <a class="btn btn--secondary btn--icon mx-1" href="{% url 'delete_question' question.id %}"
                             aria-label="Delete question"><i class="fas fa-trash-alt"></i></a>
                     </div>
                     {% endif %}

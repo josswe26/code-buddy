@@ -13,10 +13,10 @@
             <form action="{% url 'vote_question' question.id %}" method="post">
                 {% csrf_token %}
                 <input type="hidden" name="location" value="question_detail">
-                <button class="btn btn--secondary" name="vote_score" value="1" aria-label="Upvote question"><i
+                <button class="btn btn--secondary btn--icon name="vote_score" value="1" aria-label="Upvote question"><i
                         class="fas fa-arrow-up"></i></button>
                 <h4 class="votes my-1">{{ question.votes_score }}</h4>
-                <button class="btn btn--secondary" name="vote_score" value="-1" aria-label="Downvote question"><i
+                <button class="btn btn--secondary btn--icon" name="vote_score" value="-1" aria-label="Downvote question"><i
                         class="fas fa-arrow-down"></i></button>
             </form>
             {% else %}
@@ -37,10 +37,10 @@
                     <small class="text-muted">Last updated on {{ question.last_updated }}</small>
                     <!-- Show Edit and Delete buttons on questions created by the user -->
                     {% if request.user == question.author %}
-                    <div>
-                        <a class="btn btn--main mt-1" href="{% url 'edit_question' question.id %}"
+                    <div class="d-flex justify-content-center">
+                        <a class="btn btn--main btn--icon mx-1" href="{% url 'edit_question' question.id %}"
                             aria-label="Edit question"><i class="fas fa-edit"></i></a>
-                        <a class="btn btn--secondary mt-1" href="{% url 'delete_question' question.id %}"
+                        <a class="btn btn--secondary btn--icon mx-1" href="{% url 'delete_question' question.id %}"
                             aria-label="Delete question"><i class="fas fa-trash-alt"></i></a>
                     </div>
                     {% endif %}
@@ -93,10 +93,10 @@
             {% if user.is_authenticated %}
             <form action="{% url 'vote_reply' reply.id %}" method="post">
                 {% csrf_token %}
-                <button class="btn btn--secondary" name="vote_score" value="1" aria-label="Upvote reply"><i
+                <button class="btn btn--secondary btn--icon" name="vote_score" value="1" aria-label="Upvote reply"><i
                         class="fas fa-arrow-up"></i></button>
                 <h4 class="votes my-1">{{ reply.votes_score }}</h4>
-                <button class="btn btn--secondary" name="vote_score" value="-1" aria-label="Downvote reply"><i
+                <button class="btn btn--secondary btn--icon" name="vote_score" value="-1" aria-label="Downvote reply"><i
                         class="fas fa-arrow-down"></i></button>
             </form>
             {% else %}
@@ -115,10 +115,10 @@
                 <div class="card-footer d-flex justify-content-between">
                     <small class="text-muted">Last updated on {{ reply.last_updated }}</small>
                     {% if request.user == reply.author %}
-                    <div>
-                        <a class="btn btn--main" href="{% url 'edit_reply' reply.id %}"
+                    <div class="d-flex justify-content-center">
+                        <a class="btn btn--main btn--icon mx-1" href="{% url 'edit_reply' reply.id %}"
                             aria-label="Edit question"><i class="fas fa-edit"></i></a>
-                        <a class="btn btn--secondary" href="{% url 'delete_reply' reply.id %}" aria-label="Delete question"><i
+                        <a class="btn btn--secondary btn--icon mx-1" href="{% url 'delete_reply' reply.id %}" aria-label="Delete question"><i
                                 class="fas fa-trash-alt"></i></a>
                     </div>
                     {% endif %}

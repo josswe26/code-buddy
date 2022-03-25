@@ -63,6 +63,11 @@ h3, h4, h5 {
     color: #253A47;
 }
 
+.btn--icon {
+    width: 45px;
+    max-height: 38px;
+}
+
 .page-link {
     display: inline-block;
     font-weight: 400;
