@@ -146,15 +146,8 @@ form > div {
 .form-control {
     color: #253A47;
     background-color: #FFFFFD;
-    border: 1px solid #E9EDE9;
+    border: 1px solid #3F778D;
 }
-
-.form-control:focus {
-    color: #253A47;
-    background-color: #FFFFFD;
-    border-color: #253A47;
-}
-
 
 /* Footer */
 
