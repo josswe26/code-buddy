@@ -104,7 +104,7 @@ class QuestionEditView(View):
         queryset = Question.objects.all()
         question = get_object_or_404(queryset, id=id)
 
-        edit_form = QuestionForm(data=request.POST)
+        edit_form = QuestionForm(instance=question, data=request.POST)
 
         if edit_form.is_valid():
             question.title = edit_form.cleaned_data.get('title')
@@ -171,7 +171,7 @@ class ReplyEditView(View):
         queryset = Reply.objects.all()
         reply = get_object_or_404(queryset, id=id)
 
-        edit_form = ReplyForm(data=request.POST)
+        edit_form = ReplyForm(instance=reply, data=request.POST)
 
         if edit_form.is_valid():
             reply.body = edit_form.cleaned_data.get('body')
