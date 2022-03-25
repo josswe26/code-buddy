@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.contrib.postgres.search import SearchVector
+from django.contrib import messages
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.utils.text import slugify
@@ -31,8 +32,10 @@ class QuestionListView(generic.ListView):
             question_form.instance.author = request.user
             question_form.instance.slug = slugify(question_form.instance.title)
             question_form.save()
+            messages.add_message(request, messages.SUCCESS,'Your question has been submitted successfully. Thank for your collaboration!')
         else:
             question_form = QuestionForm()
+            messages.add_message(request, messages.ERROR,'There was an error submitting your question. Please try again!')
 
         return HttpResponseRedirect(reverse('home'))
         
@@ -68,8 +71,10 @@ class QuestionDetailView(View):
             reply = reply_form.save(commit=False)
             reply.question = question
             reply_form.save()
+            messages.add_message(request, messages.SUCCESS,'Your reply has been submitted successfully. Thank for your collaboration!')
         else:
             reply_form = ReplyForm()
+            messages.add_message(request, messages.ERROR,'There was an error submitting your reply. Please try again!')
 
         return HttpResponseRedirect(reverse('question_detail', args=[slug]))
 
@@ -106,8 +111,10 @@ class QuestionEditView(View):
             question.content = edit_form.cleaned_data.get('content')
             question.slug = slugify(edit_form.cleaned_data.get('title'))
             question.save()
+            messages.add_message(request, messages.SUCCESS,'You edited your question successfully.')
         else:
             edit_form = QuestionForm()
+            messages.add_message(request, messages.WARNING,'Your question has not been edited.')
 
         return HttpResponseRedirect(reverse('home'))
 
@@ -134,6 +141,7 @@ class QuestionDeleteView(View):
         question = get_object_or_404(queryset, id=id)
 
         question.delete()
+        messages.add_message(request, messages.SUCCESS,'Your question has been deleted.')
 
         return HttpResponseRedirect(reverse('home'))
 
@@ -168,8 +176,10 @@ class ReplyEditView(View):
         if edit_form.is_valid():
             reply.body = edit_form.cleaned_data.get('body')
             reply.save()
+            messages.add_message(request, messages.SUCCESS,'You edited your reply successfully.')
         else:
             edit_form = ReplyForm()
+            messages.add_message(request, messages.WARNING,'Your reply has not been edited.')
 
         return HttpResponseRedirect(reverse('question_detail', args=[reply.question.slug]))
 
@@ -198,6 +208,7 @@ class ReplyDeleteView(View):
         slug = reply.question.slug
 
         reply.delete()
+        messages.add_message(request, messages.SUCCESS,'Your reply has been deleted.')
 
         return HttpResponseRedirect(reverse('question_detail', args=[slug]))
 
@@ -289,3 +300,4 @@ class VoteReply(View):
             reply.save()
 
         return HttpResponseRedirect(reverse('question_detail', args=[reply.question.slug]))
+        
