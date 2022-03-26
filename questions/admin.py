@@ -17,7 +17,7 @@ class QuestionAdmin(SummernoteModelAdmin):
 @admin.register(Reply)
 class ReplyAdmin(SummernoteModelAdmin):
 
-    list_display = ('body', 'author', 'created_on', 'last_updated')
+    list_display = ('__str__', 'author', 'created_on', 'last_updated')
     list_filter = ('created_on', 'last_updated')
     search_fields = ('body', 'author__username')
 
