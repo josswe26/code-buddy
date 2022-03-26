@@ -8,7 +8,11 @@ class Question(models.Model):
     """ Question model """
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_questions')
+    author = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='user_questions'
+    )
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     last_updated = models.DateTimeField(auto_now=True)
@@ -25,8 +29,16 @@ class Question(models.Model):
 
 class Reply(models.Model):
     """ Reply model """
-    question = models.ForeignKey(Question, on_delete=models.CASCADE, related_name='replies')
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_replies')
+    question = models.ForeignKey(
+        Question,
+        on_delete=models.CASCADE,
+        related_name='replies'
+    )
+    author = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='user_replies'
+    )
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     last_updated = models.DateTimeField(auto_now=True)
@@ -44,14 +56,28 @@ class Reply(models.Model):
 
 class QuestionVote(models.Model):
     """ Question votes model """
-    voter = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_question_votes')
+    voter = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='user_question_votes'
+    )
     score = models.IntegerField(choices=SCORE)
-    question = models.ForeignKey(Question, on_delete=models.CASCADE, related_name='question_votes')
+    question = models.ForeignKey(
+        Question,
+        on_delete=models.CASCADE,
+        related_name='question_votes'
+    )
 
 
 class ReplyVote(models.Model):
     """ Reply votes model """
-    voter = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_reply_votes')
+    voter = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='user_reply_votes'
+    )
     score = models.IntegerField(choices=SCORE)
-    reply = models.ForeignKey(Reply, on_delete=models.CASCADE, related_name='reply_votes')
-    
+    reply = models.ForeignKey(
+        Reply,
+        on_delete=models.CASCADE,
+        related_name='reply_votes')
