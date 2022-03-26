@@ -7,6 +7,7 @@ urlpatterns = [
     path('', views.QuestionListView.as_view(), name='home'),
     path('<slug:slug>/', views.QuestionDetailView.as_view(), name='question_detail'),
     path('ask_question', views.AskQuestionView.as_view(), name='ask_question'),
+    path('new_reply/<int:question_id>/', views.NewReplyView.as_view(), name='new_reply'),
     path('edit_question/<int:id>/', views.QuestionEditView.as_view(), name='edit_question'),
     path('delete_question/<int:id>/', views.QuestionDeleteView.as_view(), name='delete_question'),
     path('edit_reply/<int:id>/', views.ReplyEditView.as_view(), name='edit_reply'),
