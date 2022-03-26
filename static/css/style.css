@@ -76,6 +76,16 @@ h3, h4, h5 {
     max-height: 38px;
 }
 
+.btn--voted {
+    color: #253A47;
+    background-color: #3F778D;  
+}
+
+.btn--voted:hover {
+    color: #E9EDE9;
+    background-color: #3F778D;  
+}
+
 .page-link {
     display: inline-block;
     font-weight: 400;

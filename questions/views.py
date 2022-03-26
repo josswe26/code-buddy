@@ -245,12 +245,24 @@ class VoteQuestion(View):
 
         if existing_vote:
             existing_vote.delete()
+
+            question.upvoted = False
+            question.downvoted = False
+
         else:
             vote, created = QuestionVote.objects.update_or_create(
                 voter=request.user,
                 question=question,
                 defaults={'score': score},
             )
+
+            if vote.score == '1':
+                question.upvoted = True
+                question.downvoted = False
+            elif vote.score == '-1':
+                question.downvoted = True
+                question.upvoted = False
+
             vote.save()
             
         try:
@@ -283,12 +295,23 @@ class VoteReply(View):
 
         if existing_vote:
             existing_vote.delete()
+
+            reply.upvoted = False
+            reply.downvoted = False
         else:
             vote, created = ReplyVote.objects.update_or_create(
                 voter=request.user,
                 reply=reply,
                 defaults={'score': score},
             )
+
+            if score == '1':
+                reply.upvoted = True
+                reply.downvoted = False
+            elif score == '-1':
+                reply.downvoted = True
+                reply.upvoted = False
+                
             vote.save()
 
         try:

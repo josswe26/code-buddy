@@ -13,11 +13,21 @@
             <form action="{% url 'vote_question' question.id %}" method="post">
                 {% csrf_token %}
                 <input type="hidden" name="location" value="question_detail">
-                <button class="btn btn--secondary btn--icon name="vote_score" value="1" aria-label="Upvote question"><i
+                {% if question.upvoted %}
+                <button class="btn btn--voted btn--icon" name="vote_score" value=1 aria-label="Remove upvote from question"><i
                         class="fas fa-arrow-up"></i></button>
+                {% else %}
+                <button class="btn btn--secondary btn--icon" name="vote_score" value=1 aria-label="Upvote question"><i
+                    class="fas fa-arrow-up"></i></button>
+                {% endif %}
                 <h4 class="votes my-1">{{ question.votes_score }}</h4>
-                <button class="btn btn--secondary btn--icon" name="vote_score" value="-1" aria-label="Downvote question"><i
+                {% if question.downvoted %}
+                <button class="btn btn--voted btn--icon" name="vote_score" value="-1" aria-label="Remove downvote from question"><i
                         class="fas fa-arrow-down"></i></button>
+                {% else %}
+                <button class="btn btn--secondary btn--icon" name="vote_score" value="-1" aria-label="Downvote question"><i
+                    class="fas fa-arrow-down"></i></button>
+                {% endif %}
             </form>
             {% else %}
             <h4 class="votes my-1">{{ question.votes_score }}</h4>
@@ -93,11 +103,21 @@
             {% if user.is_authenticated %}
             <form action="{% url 'vote_reply' reply.id %}" method="post">
                 {% csrf_token %}
+                {% if reply.upvoted %}
+                <button class="btn btn--voted btn--icon" name="vote_score" value="1" aria-label="Remove upvote from reply"><i
+                    class="fas fa-arrow-up"></i></button>
+                {% else %}
                 <button class="btn btn--secondary btn--icon" name="vote_score" value="1" aria-label="Upvote reply"><i
-                        class="fas fa-arrow-up"></i></button>
+                    class="fas fa-arrow-up"></i></button>
+                {% endif %}
                 <h4 class="votes my-1">{{ reply.votes_score }}</h4>
+                {% if reply.downvoted %}
+                <button class="btn btn--voted btn--icon" name="vote_score" value="-1" aria-label="Remove downvote from reply"><i
+                    class="fas fa-arrow-down"></i></button>
+                {% else %}
                 <button class="btn btn--secondary btn--icon" name="vote_score" value="-1" aria-label="Downvote reply"><i
-                        class="fas fa-arrow-down"></i></button>
+                    class="fas fa-arrow-down"></i></button>
+                {% endif %}
             </form>
             {% else %}
             <h4 class="votes my-1">{{ question.votes_score }}</h4>

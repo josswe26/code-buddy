@@ -13,6 +13,8 @@ class Question(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     last_updated = models.DateTimeField(auto_now=True)
     votes_score = models.IntegerField(default=0)
+    upvoted = models.BooleanField(default=False)
+    downvoted = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['-created_on']
@@ -29,6 +31,8 @@ class Reply(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     last_updated = models.DateTimeField(auto_now=True)
     votes_score = models.IntegerField(default=0)
+    upvoted = models.BooleanField(default=False)
+    downvoted = models.BooleanField(default=False)
 
     class Meta:
         verbose_name_plural = 'replies'
