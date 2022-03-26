@@ -10,7 +10,7 @@ from .forms import QuestionForm, ReplyForm
 
 
 class QuestionListView(generic.ListView):
-    """ List view to render all questions """
+    """ List view to render all existing questions """
 
     model = Question
     paginate_by = 10
@@ -18,14 +18,25 @@ class QuestionListView(generic.ListView):
     queryset = Question.objects.all().order_by('-created_on')
     template_name = 'index.html'
 
-    def get_context_data(self, **kwargs):
-        """ Get question list and question form and return data for rendering"""
-        context = super(QuestionListView, self).get_context_data(**kwargs)
-        context['question_form'] = QuestionForm()
-        return context
+
+class AskQuestionView(View):
+    """View to allow user to ask a new question"""
+
+    def get(self, request, *args, **kwargs):
+        """ Get question form and render it """
+
+        question_form = QuestionForm()
+
+        return render(
+            request,
+            'ask_question.html',
+            {
+                'question_form': question_form,
+            }
+        )
 
     def post(self, request, *args, **kwargs):
-        """ Post method for QuestionForm """
+        """ Post data to question form and returns to home page """
         question_form = QuestionForm(data=request.POST)
 
         if question_form.is_valid():
@@ -38,8 +49,8 @@ class QuestionListView(generic.ListView):
             messages.add_message(request, messages.ERROR,'There was an error submitting your question. Please try again!')
 
         return HttpResponseRedirect(reverse('home'))
+    
         
-
 class QuestionDetailView(View):
     """  View to render detailed information of a specific question """
 
