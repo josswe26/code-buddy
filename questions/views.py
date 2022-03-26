@@ -19,6 +19,25 @@ class QuestionListView(generic.ListView):
     template_name = 'index.html'
 
 
+class QuestionDetailView(View):
+    """  View to render detailed information of a specific question """
+
+    def get(self, request, slug, *args, **kwargs):
+        """ Get question information and return data for rendering """
+        queryset = Question.objects.all()
+        question = get_object_or_404(queryset, slug=slug)
+        replies = question.replies.all().order_by('-votes_score')
+        
+        return render(
+            request,
+            'question_detail.html',
+            {
+                'question': question,
+                'replies': replies,
+            }
+        )
+
+
 class AskQuestionView(View):
     """View to allow user to ask a new question"""
 
@@ -37,6 +56,7 @@ class AskQuestionView(View):
 
     def post(self, request, *args, **kwargs):
         """ Post data to question form and returns to home page """
+
         question_form = QuestionForm(data=request.POST)
 
         if question_form.is_valid():
@@ -49,31 +69,33 @@ class AskQuestionView(View):
             messages.add_message(request, messages.ERROR,'There was an error submitting your question. Please try again!')
 
         return HttpResponseRedirect(reverse('home'))
-    
-        
-class QuestionDetailView(View):
-    """  View to render detailed information of a specific question """
 
-    def get(self, request, slug, *args, **kwargs):
-        """ Get question information and return data for rendering """
+
+class NewReplyView(View):
+    """View to allow user to create a new reply"""
+
+    def get(self, request, question_id, *args, **kwargs):
+        """ Get reply form and related question and render data """
+
         queryset = Question.objects.all()
-        question = get_object_or_404(queryset, slug=slug)
-        replies = question.replies.all().order_by('-votes_score')
-        
+        question = get_object_or_404(queryset, id=question_id)
+
+        reply_form = ReplyForm()
+
         return render(
             request,
-            'question_detail.html',
+            'new_reply.html',
             {
+                'reply_form': reply_form,
                 'question': question,
-                'replies': replies,
-                'reply_form': ReplyForm()
             }
         )
 
-    def post(self, request, slug, *args, **kwargs):
-        """ Post method for ReplyForm """
+    def post(self, request, question_id, *args, **kwargs):
+        """ Post data to reply form and returns to the question """
+
         queryset = Question.objects.all()
-        question = get_object_or_404(queryset, slug=slug)
+        question = get_object_or_404(queryset, id=question_id)
 
         reply_form = ReplyForm(data=request.POST)
 
@@ -87,7 +109,7 @@ class QuestionDetailView(View):
             reply_form = ReplyForm()
             messages.add_message(request, messages.ERROR,'There was an error submitting your reply. Please try again!')
 
-        return HttpResponseRedirect(reverse('question_detail', args=[slug]))
+        return HttpResponseRedirect(reverse('question_detail', args=[question.slug]))
 
 
 class QuestionEditView(View):
