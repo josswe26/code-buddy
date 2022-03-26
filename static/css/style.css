@@ -14,7 +14,7 @@ h3, h4, h5 {
     font-family: 'Roboto', sans-serif;
 }
 
-.logo, .votes {
+.logo, .votes, .error-msg {
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -31,6 +31,14 @@ h3, h4, h5 {
 
 .link-color-blue:hover {
     color: #3F778D;
+}
+
+.link-color-light-blue {
+    color: #3F778D;
+}
+
+.link-color-light-blue:hover {
+    color: #253A47;
 }
 
 .link-color-light {

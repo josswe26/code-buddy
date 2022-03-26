@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid my-4">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 pt-3">
+            <div class="card mb-3">
+
+                <img class="card-img-top"
+                    src="https://res.cloudinary.com/josswe/image/upload/v1648256693/code_buddy/404_error_mps3ly.jpg"
+                    alt="Cat on top of a laptop.">
+                <div class="card-body">
+
+                    <h3 class="card-title text-center error-msg my-4">Oops, our buddy cannot find the page you are looking for.</h3>
+
+                    <h3 class="card-title text-center error-msg">  Let's take you back 
+                        <a href="{% url 'home' %}" class="link-color-light-blue text-decoration-none">home</a>
+                    </h3>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

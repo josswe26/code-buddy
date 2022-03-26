@@ -14,4 +14,5 @@ urlpatterns = [
     path('vote_question/<int:id>', views.VoteQuestion.as_view(), name='vote_question'),
     path('vote_reply/<int:id>', views.VoteReply.as_view(), name='vote_reply'),
     path('about', TemplateView.as_view(template_name="about.html"), name='about'),
+    path('404', TemplateView.as_view(template_name="404.html"), name='404'),
     ]
