@@ -26,6 +26,11 @@ Visit the deployed website [here](https://django-code-buddy.herokuapp.com/).
 2. [Features](#features)
 3. [Technologies Used](#technologies-used)
 4. [Testing](#testing)
+    1. [Testing User Stories](#testing-user-stories)
+    2. [Code Validation](#code-validation)
+    3. [Accessibility](#accessibility)
+    4. [Tools Testing](#tools-testing)
+    5. [Manual Testing](#manual-testing)
 5. [Deployment](#deployment)
 6. [Finished Product](#finished-product)
 7. [Credits](#credits)
@@ -243,6 +248,140 @@ Nunito and Roboto were chosen after some research on fonts that are better for r
 [Back to top ⇧](#code-buddy)
 
 ## Testing
+
+### Testing User Stories
+
+#### As a Site Admin I can create, read, update and delete questions and answers so that I can manage the site content
+
+* An admin site has been provided so that the Site Admin can manage question and replies.
+
+* Question and replies can be created, read, updated and deleted from the site.
+
+* Questions and replies main fields are being displayed for the Site Admin to identify them easily.
+
+* Questions and replies can be filtered and searched to narrow down a specific group.
+
+
+#### As a Site User I can register an account so that I can create and rate questions and replies
+
+* Account registration has been provided for Site User.
+
+* Registered Site Users are given the possibility to submit questions and replies.
+
+* Registered Site Users are able to edit and delete their own questions.
+
+* Registered Site Users are able to vote upvote and downvote questions and replies.
+
+
+#### As a Site User I can create new questions so that I can receive help from other users
+
+* An Ask Question page has been provided for registered Site Users.
+
+* A form is available in the Ask Question page for the Site Users to be able to register new questions. 
+
+* An Ask Question button is displayed to the registered Site Users at the top of the questions list to access the Ask Question page.
+
+
+#### As a Site User I can edit and delete my own questions so that I can manage the questions I created
+
+* Edit and Delete Question pages are provided for registered Site Users.
+
+* A form is available inside those pages for the Site Users to be able to edit or delete a specific question.
+
+* The Edit Question form is prepopulated with the current data for the user to be able to edit the content.
+
+* A Delete Question form is provided for Site Users to confirm the deletion. 
+
+* Edit and Delete button are displayed on those questions the user has created to access the respective page.
+
+
+#### As a Site User I can reply to questions so that I can help other users to find a solution
+
+* A Leave Reply page has been provided for registered Site Users.
+
+* A form is available in the Leave Reply page for the Site Users to be able to register new replies to the questions. 
+
+* A Leave Reply button is displayed to the registered Site Users under the Question content inside the Question Details page. This button is used to access the Leave Reply page.
+
+
+#### As a Site User I can edit and delete my own replies so that I can manage the replies I created
+
+* Edit and Delete Reply pages are provided for registered Site Users.
+
+* A form is available inside those pages for the Site Users to be able to edit or delete a specific reply.
+
+* The Edit Reply form is prepopulated with the current data for the user to be able to edit the content.
+
+* A Delete Reply form is provided for Site Users to confirm the deletion. 
+
+* Edit and Delete button are displayed on those replies the user has created to access the respective page.
+
+
+#### As a Site User I can upvote and downvote questions and answers so that I can give relevance to the content.
+
+* Upvote and downvote buttons are provided for registered Site Users next to each question and reply.
+
+* Registered Site Users can upvote, downvote or remove their votes using those buttons from the Home and Question Detail pages.
+
+
+#### As a Site User I can view a list of questions so that I can select one to read
+
+* The Home page is a Question List, displaying all existing question to all Site Users.
+
+* Questions are displayed in creation date/time order, showing the newest questions on top. 
+
+
+#### As a Site User I can search for specific questions so that I can easily find the information I am looking for
+
+* A Question Search field has been provided to all Site Users in the top of all pages.
+
+* This search field allow all Site Users to search questions using keyword(s).
+
+* A Search Results page with a list of questions matching the searched keyword(s) is provided.
+
+* The list gets paginated if the Search Results exceed 10 questions.
+
+
+#### As a Site User I can view a paginated list of questions so that I can easily select a question to view
+
+* The Question List displayed in the Home page is paginated every 10 questions.
+
+* Navigation buttons are provided on the bottom of each page to navigate easily between pages.
+
+
+#### As a Site User I can click on a question so that I can read the full question and the replies received
+
+* A Question Detail page is provided for all Site Users to review the full question content.
+
+* The question title in the Question List page is provided as a link so that Site Users can access the Question Detail page for each specific question.
+
+
+#### As a Site User I can view the replies a question received so that I can find a solutions to the question
+
+* Question's replies are being listed inside the Question Detail page for each specific question under the question content.
+
+ * Replies are being sorted by their rating so that Site Users can find the most relevant replies on top.
+
+
+#### As a Site User I can view the score on each question so that I can find the most helpful
+
+* The question's rating is being displayed for all Site Users next to each question.
+
+
+#### As a Site User I can view the score on each reply so that I can find the most helpful
+
+* The reply's rating is being displayed for all Site Users next to each reply.
+
+* Replies are ordered by this rating so Site Users can find the most relevant replies on top
+
+
+### Code Validation
+
+### Accessibility
+
+### Tools Testing
+
+### Manual Testing
 
 [Back to top ⇧](#code-buddy)
 
