@@ -112,6 +112,21 @@ According to the strategy table, not all features can be implemented in the firs
 
 #### User Stories
 
+GitHub projects was used as my project management tool to track user stories. Using a Kanban board helped to focus on specific tasks and track the project progress.
+
+**Start**
+![User Stories Progress - Start](assets/readme_files/user_stories_start.png)
+
+**Week 1**
+![User Stories Progress - Week 1](assets/readme_files/user_stories_week1.png)
+
+**Week 2**
+![User Stories Progress - Week 2](assets/readme_files/user_stories_week2.png)
+
+**Week 3**
+![User Stories Progress - Week 3](assets/readme_files/user_stories_week3.png)
+
+
 ### Structure
 
 The website has been organized in a Hierarchical Tree Structure to ensure the site user navigates through the site effortlessly and intuitively. Here you can you can find the website map design.
