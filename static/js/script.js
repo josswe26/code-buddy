@@ -1,5 +1,5 @@
 setTimeout(function () {
     let messages = $('#msg');
     let alert = new bootstrap.Alert(messages);
-    alert.close()
+    alert.close();
 }, 3000);

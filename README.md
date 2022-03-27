@@ -251,7 +251,7 @@ Nunito and Roboto were chosen after some research on fonts that are better for r
 
 ### Testing User Stories
 
-#### As a Site Admin I can create, read, update and delete questions and answers so that I can manage the site content
+#### 1. As a Site Admin I can create, read, update and delete questions and answers so that I can manage the site content
 
 * An admin site has been provided so that the Site Admin can manage question and replies.
 
@@ -262,7 +262,7 @@ Nunito and Roboto were chosen after some research on fonts that are better for r
 * Questions and replies can be filtered and searched to narrow down a specific group.
 
 
-#### As a Site User I can register an account so that I can create and rate questions and replies
+#### 2. As a Site User I can register an account so that I can create and rate questions and replies
 
 * Account registration has been provided for Site User.
 
@@ -273,7 +273,7 @@ Nunito and Roboto were chosen after some research on fonts that are better for r
 * Registered Site Users are able to vote upvote and downvote questions and replies.
 
 
-#### As a Site User I can create new questions so that I can receive help from other users
+#### 3. As a Site User I can create new questions so that I can receive help from other users
 
 * An Ask Question page has been provided for registered Site Users.
 
@@ -282,7 +282,7 @@ Nunito and Roboto were chosen after some research on fonts that are better for r
 * An Ask Question button is displayed to the registered Site Users at the top of the questions list to access the Ask Question page.
 
 
-#### As a Site User I can edit and delete my own questions so that I can manage the questions I created
+#### 4. As a Site User I can edit and delete my own questions so that I can manage the questions I created
 
 * Edit and Delete Question pages are provided for registered Site Users.
 
@@ -295,7 +295,7 @@ Nunito and Roboto were chosen after some research on fonts that are better for r
 * Edit and Delete button are displayed on those questions the user has created to access the respective page.
 
 
-#### As a Site User I can reply to questions so that I can help other users to find a solution
+#### 5. As a Site User I can reply to questions so that I can help other users to find a solution
 
 * A Leave Reply page has been provided for registered Site Users.
 
@@ -304,7 +304,7 @@ Nunito and Roboto were chosen after some research on fonts that are better for r
 * A Leave Reply button is displayed to the registered Site Users under the Question content inside the Question Details page. This button is used to access the Leave Reply page.
 
 
-#### As a Site User I can edit and delete my own replies so that I can manage the replies I created
+#### 6. As a Site User I can edit and delete my own replies so that I can manage the replies I created
 
 * Edit and Delete Reply pages are provided for registered Site Users.
 
@@ -317,21 +317,21 @@ Nunito and Roboto were chosen after some research on fonts that are better for r
 * Edit and Delete button are displayed on those replies the user has created to access the respective page.
 
 
-#### As a Site User I can upvote and downvote questions and answers so that I can give relevance to the content.
+#### 7. As a Site User I can upvote and downvote questions and answers so that I can give relevance to the content.
 
 * Upvote and downvote buttons are provided for registered Site Users next to each question and reply.
 
 * Registered Site Users can upvote, downvote or remove their votes using those buttons from the Home and Question Detail pages.
 
 
-#### As a Site User I can view a list of questions so that I can select one to read
+#### 8. As a Site User I can view a list of questions so that I can select one to read
 
 * The Home page is a Question List, displaying all existing question to all Site Users.
 
 * Questions are displayed in creation date/time order, showing the newest questions on top. 
 
 
-#### As a Site User I can search for specific questions so that I can easily find the information I am looking for
+#### 9. As a Site User I can search for specific questions so that I can easily find the information I am looking for
 
 * A Question Search field has been provided to all Site Users in the top of all pages.
 
@@ -342,33 +342,33 @@ Nunito and Roboto were chosen after some research on fonts that are better for r
 * The list gets paginated if the Search Results exceed 10 questions.
 
 
-#### As a Site User I can view a paginated list of questions so that I can easily select a question to view
+#### 10. As a Site User I can view a paginated list of questions so that I can easily select a question to view
 
 * The Question List displayed in the Home page is paginated every 10 questions.
 
 * Navigation buttons are provided on the bottom of each page to navigate easily between pages.
 
 
-#### As a Site User I can click on a question so that I can read the full question and the replies received
+#### 11. As a Site User I can click on a question so that I can read the full question and the replies received
 
 * A Question Detail page is provided for all Site Users to review the full question content.
 
 * The question title in the Question List page is provided as a link so that Site Users can access the Question Detail page for each specific question.
 
 
-#### As a Site User I can view the replies a question received so that I can find a solutions to the question
+#### 12. As a Site User I can view the replies a question received so that I can find a solutions to the question
 
 * Question's replies are being listed inside the Question Detail page for each specific question under the question content.
 
  * Replies are being sorted by their rating so that Site Users can find the most relevant replies on top.
 
 
-#### As a Site User I can view the score on each question so that I can find the most helpful
+#### 13. As a Site User I can view the score on each question so that I can find the most helpful
 
 * The question's rating is being displayed for all Site Users next to each question.
 
 
-#### As a Site User I can view the score on each reply so that I can find the most helpful
+#### 14. As a Site User I can view the score on each reply so that I can find the most helpful
 
 * The reply's rating is being displayed for all Site Users next to each reply.
 
@@ -403,6 +403,29 @@ W3C Markup Validator also found a great amount of errors in pages with user inpu
 W3C CSS Validator found no errors or warnings on my CSS.
 
 ![CSS validation image](assets/testing_files/css_validation.png)
+
+
+#### Pyhton
+
+Pylint was used continuously during the development process to analyze the Python code for programming errors.
+
+[PEP8 online](http://pep8online.com/) was further used to validate the Python code to validate the Python code for PEP8 requirements. See below the validation results and the reviewed results. 
+
+
+| Location | Errors / Warnings | Code Reviewed |
+| --- | --- | --- |
+| ./question/admin.py | No errors / warnings |![admin.py code reviewed image](assets/testing_files/pep8_admin.png) |
+| ./question/forms.py | ![forms.py errors/warnings image](assets/testing_files/pep8_forms_errors.png) | ![forms.py code reviewed image](assets/testing_files/pep8_forms_reviewed.png) |
+| ./question/models.py | ![models.py errors/warnings image](assets/testing_files/pep8_models_errors.png) | ![models.py code reviewed image](assets/testing_files/pep8_models_reviewed.png) |
+| ./question/urls.py | ![urls.py errors/warnings image](assets/testing_files/pep8_urls_errors.png) | ![urls.py code reviewed image](assets/testing_files/pep8_urls_reviewed.png) |
+| ./question/views.py | ![views.py errors/warnings image](assets/testing_files/pep8_views_errors.png) | ![views.py code reviewed image](assets/testing_files/pep8_views_reviewed.png) |
+
+
+#### JavaScript
+
+[JSHints JavaScript Code Quality Tool](https://jshint.com/) was used to validate the site's JavaScript code. 
+
+No errors were found.
 
 
 ### Accessibility
