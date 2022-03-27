@@ -377,6 +377,34 @@ Nunito and Roboto were chosen after some research on fonts that are better for r
 
 ### Code Validation
 
+#### HTML
+
+The [W3C Markup Validator](https://validator.w3.org/) service was used to validate the HTML code of the project in order to ensure there were no syntax errors.
+ 
+W3C Markup Validator found the following errors concerning index.html.
+
+![index.html validation errors image](assets/testing_files/index_validation_errors.jpg)
+
+The errors were solved by removing the aria-label attribute from the nav, as well as removing the invalid closing Div tag.
+
+![index.html validation](assets/testing_files/index_validation.jpg)
+
+
+
+W3C Markup Validator also found a great amount of errors in pages with user input. However I found those errors to be coming from the Summernote editor. See example below:
+
+![Summernote HTML errors image](assets/testing_files/summernote_errors.jpg)
+
+
+##### CSS
+
+[W3C CSS Validator](https://jigsaw.w3.org/css-validator/) service was used to validate the CSS code of the project in order to ensure there were no syntax errors. 
+
+W3C CSS Validator found no errors or warnings on my CSS.
+
+![CSS validation image](assets/testing_files/css_validation.png)
+
+
 ### Accessibility
 
 ### Tools Testing
