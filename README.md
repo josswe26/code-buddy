@@ -141,6 +141,60 @@ The website has been organized in a Hierarchical Tree Structure to ensure the si
 
 * A 404-error page is available.
 
+
+#### Database Model
+
+The database model has been designed using [drawsql](https://drawsql.app/). The type of database being used for the is relational database being managed using [PostgreSQL](https://www.postgresql.org/).
+
+![Code Buddy website map](assets/readme_files/db_model.png)
+
+**Question Model**
+
+* Title: Unique question title provided by the author.
+
+* Author: Store the author of the question as a User foreign key.
+
+* Content: Question details provided by the author.
+
+* Slug: Store a unique slug to identify the question by.
+
+* Created On: Date and time set automatically at the question's creation.
+
+* Last updated: Date and time set automatically every time the question is updated.
+
+* Votes score: Calculated score of the question's votes.
+
+**Reply Model**
+
+* Question: A foreign key from the Question model, storing the question being replied.
+
+* Author: Store the author of the reply as a User foreign key.
+
+* Body: Reply body with details provided by the author.
+
+* Created On: Date and time set automatically at the reply's creation.
+
+* Last updated: Date and time set automatically every time the reply is updated.
+
+* Votes score: Calculated score of the reply's votes.
+
+**QuestionVote Model**
+
+* Voter: Foreign key from the User model, storing the user voting the question.
+
+* Score: Score provided by the voter. The options are upvote with a value of 1 or downvote with a value of -1.
+
+* Question: A foreign key from the Question model, storing the question being voted.
+
+**ReplyVote Model**
+
+* Voter: Foreign key from the User model, storing the user voting the reply.
+
+* Score: Score provided by the voter. The options are upvote with a value of 1 or downvote with a value of -1.
+
+* Reply: A foreign key from the Reply model, storing the question being voted.
+
+
 ### Skeleton
 
 #### Wireframes
