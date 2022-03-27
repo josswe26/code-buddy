@@ -86,7 +86,7 @@
 
 <!-- Site Pagination -->
 {% if is_paginated %}
-<nav aria_label="Page navigation">
+<nav>
     <ul class="pagination justify-content-center">
         {% if page_obj.has_previous %}
         <li>
@@ -101,7 +101,5 @@
     </ul>
 </nav>
 {% endif %}
-
-</div>
 
 {% endblock %}
