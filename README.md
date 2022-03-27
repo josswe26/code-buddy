@@ -1,12 +1,15 @@
 # Code Buddy
 
-![Code Buddy mockup images]()
+
+![Code Buddy mockup images](assets/readme_files/mockup_image.jpg)
+
 
 Code Buddy is a website created to allow developers to ask questions and receive relevant answers from other developers.
 
 The main objective of the site is to allow developers to share knowledge and ideas, collaborate and help each other to find solutions to the problems they face. This is achieved by providing a platform of questions and answers, where users can search for the information they are looking for. Developers are also able to upvote or downvote the questions and answers in order to assure that relevant content gets highlighted.
 
 Visit the deployed website [here](https://django-code-buddy.herokuapp.com/).
+
 
 ## Table of Contents
 
@@ -28,7 +31,9 @@ Visit the deployed website [here](https://django-code-buddy.herokuapp.com/).
 7. [Credits](#credits)
 8. [Acknowledgements](#acknowledgements)
 
+
 ***
+
 
 ## User Experience (UX)
 
@@ -46,6 +51,7 @@ Visit the deployed website [here](https://django-code-buddy.herokuapp.com/).
 
 * Site users are able to upvote or downvote the questions and answers to help identify relevant content.
 
+
 #### User Goals
 
 * As a Site Admin, I want to manage the site content.
@@ -59,6 +65,7 @@ Visit the deployed website [here](https://django-code-buddy.herokuapp.com/).
 * As a Site User, I want to manage the content I created.
 
 * As a Site User, I want to be able to help make the content more relevant.
+
 
 #### Strategy Table
 
@@ -74,6 +81,7 @@ Ability to search for questions | 4 | 3
 Add tags to the questions | 3 | 1
 Upvote / downvote question and replies | 4 | 3
 **Total** | **37** | **29**
+
 
 ### Scope
 
@@ -100,6 +108,7 @@ According to the strategy table, not all features can be implemented in the firs
 * Social media signup
 
 * Add tags to the questions
+
 
 #### User Stories
 
