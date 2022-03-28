@@ -1051,7 +1051,7 @@ iPhone 7 | iOS 15 |No appearance, responsiveness nor functionality issues. | <sp
         <td rowspan=2>Body input</td>
         <td rowspan=2>Registered</td>
         <td>Functionality</td>
-        <td>Summernote editor display correctly.<br>Text can be entered in the field.<br>Unable to validate when field is left empty. Unable to submit if this happends as form is invalid.</td>
+        <td>Summernote editor display correctly.<br>Text can be entered in the field.<br>Unable to validate when field is left empty. Unable to submit if this happens as form is invalid.</td>
         <td><span style="color:red">Fail</span></td>
     </tr>
     <tr>
@@ -1113,7 +1113,7 @@ iPhone 7 | iOS 15 |No appearance, responsiveness nor functionality issues. | <sp
         <td rowspan=2>Content input</td>
         <td rowspan=2>Registered</td>
         <td>Functionality</td>
-        <td>Summernote editor display correctly.<br>Text in the field is being prepopulated correctly.<br>Text can be edited.<br>Unable to validate when field is left empty. Unable to submit if this happends as form is invalid.</td>
+        <td>Summernote editor display correctly.<br>Text in the field is being prepopulated correctly.<br>Text can be edited.<br>Unable to validate when field is left empty. Unable to submit if this happens as form is invalid.</td>
         <td><span style="color:red">Fail</span></td>
     </tr>
     <tr>
@@ -1202,7 +1202,7 @@ iPhone 7 | iOS 15 |No appearance, responsiveness nor functionality issues. | <sp
         <td rowspan=2>Content input</td>
         <td rowspan=2>Registered</td>
         <td>Functionality</td>
-        <td>Summernote editor display correctly.<br>Text in the field is being prepopulated correctly.<br>Text can be edited.<br>Unable to validate when field is left empty. Unable to submit if this happends as form is invalid.</td>
+        <td>Summernote editor display correctly.<br>Text in the field is being prepopulated correctly.<br>Text can be edited.<br>Unable to validate when field is left empty. Unable to submit if this happens as form is invalid.</td>
         <td><span style="color:red">Fail</span></td>
     </tr>
     <tr>
@@ -1240,7 +1240,7 @@ iPhone 7 | iOS 15 |No appearance, responsiveness nor functionality issues. | <sp
         <td rowspan=2>Yes button</td>
         <td rowspan=2>Registered</td>
         <td>Functionality</td>
-        <td>Clicking the button submit the form and redirects to the originating page.<br>Reply get deleted.<br>Display message if the reply is deleted successfully or not.</td>
+        <td>Clicking the button submit the form and redirects to the originating page.<br>Reply gets deleted.<br>Display message if the reply is deleted successfully or not.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -1279,7 +1279,7 @@ iPhone 7 | iOS 15 |No appearance, responsiveness nor functionality issues. | <sp
         <td rowspan=2>Username input</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
-        <td>Text can be entered in the field.<br>Field validates input to be present.<br>Display message if the username already exist.</td>
+        <td>Text can be entered in the field.<br>Field validates input to be present.<br>Display message if the username already exists.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -1353,7 +1353,7 @@ iPhone 7 | iOS 15 |No appearance, responsiveness nor functionality issues. | <sp
         <td rowspan=2>Username input</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
-        <td>Text can be entered in the field.<br>Field validates input to be present.<br>Display message if the username doesn't exist.</td>
+        <td>Text can be entered in the field.<br>Field validates input to be present.<br>Display message if the username doesn't exists.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
