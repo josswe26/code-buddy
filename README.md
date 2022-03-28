@@ -452,7 +452,745 @@ Page | Lighthouse Report |
 
 ### Tools Testing
 
+#### [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
+
+Chrome DevTools was used during the development process to test, explore and modify HTML elements and CSS styles used in the project.
+
+
+#### Responsiveness
+
+* [Am I Responsive?](http://ami.responsivedesign.is/#) was used to check responsiveness of the site pages across different devices.
+
+* Chrome DevTools was used to test responsiveness in different screen sizes during the development process.
+
+
 ### Manual Testing
+
+#### Browser Compatibility
+
+Browser | Outcome | Pass/Fail | 
+--- | --- | --- |
+Google Chrome | No appearance, responsiveness nor functionality issues.| <span style="color:green">Pass</span> |
+Safari | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+Mozilla Firefox | No responsiveness nor functionality issues.| <span style="color:green">Pass</span> |
+Microsoft Edge | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+
+
+#### Device Compatibility
+
+Device | Operative System |Outcome | Pass/Fail
+--- | --- | --- | --- |
+Dell Optiplex 7060 | Windows 11 | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+MacBook Pro 15" | macOS Big Sur | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+Dell Latitude 5300 | Windows 10 | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+iPad Pro 12.9" | iOS 15 | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+iPad Pro 10.5" | iOS 15 |No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+iPhone XR | iOS 15 |No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+iPhone 7 | iOS 15 |No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+
+
+#### Test Results
+
+**General**
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=14>Navigation Bar</td>
+        <td rowspan=2>Main logo link</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking the link redirects to the Home page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Home link</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking the link redirects to the Home page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>About link</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking the link redirects to the About page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Register link</td>
+        <td rowspan=2>Unregistered</td>
+        <td>Functionality</td>
+        <td>Clicking the link redirects to the Register page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Login link</td>
+        <td rowspan=2>Unregistered</td>
+        <td>Functionality</td>
+        <td>Clicking the link redirects to the Login page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Logout link</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the link redirects to the Logout page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Hamburger Menu button </td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking the button toggle navigation menu.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Responsive navigation menu on smaller screens.<br>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=4>Search Bar</td>
+        <td rowspan=2>Input field</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Pleaceholder "Search Question" shows as expected.<br>Text can be entered in the field.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Search button</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking the link redirects to the Search Results page.<br>Input text is being posted to the Search Results page correctly.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=10>Footer</td>
+        <td rowspan=2>Logo link</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking the link redirects to the home page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Facebook icon</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking the link open Facebook page on a separate tab.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Instagram icon</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking the link open Instagram page on a separate tab.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Youtube icon</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking the link open Youtube page on a separate tab.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Twitter icon</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking the link open Twitter page on a separate tab.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+</table>
+
+#### Home page 
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=2>Page Buttons</td>
+        <td rowspan=2>Ask Question button</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking the button redirects to the Ask Question page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=12>Question</td>
+        <td rowspan=2>Score</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Score renders correctly.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Title link</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Title renders correctly.<br>Clicking the link redirects to Question Detail page for the correct question.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Author</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Author renders correctly.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Last updated</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Date and time when the question was created display correctly.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Edit Question button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the button redirects to Edit Question page for the correct question.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Delete Question button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the button redirects to Delete Question page for the correct question.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=4>Voting</td>
+        <td rowspan=2>Upvote button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the button toggle the user's upvote.<br>Score is updated by 1.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.<br>Button selection is not working correctly. Button stay selected/unselected for all users and not only for the current user.</td>
+        <td><span style="color:red">Fail</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Downvote button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the button toggle the user's upvote.<br>Score is updated by -1.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.<br>Button selection is not working correctly. Button stay selected/unselected for all users and not only for the current user.</td>
+        <td><span style="color:red">Fail</span></td>
+    </tr>
+    <tr>
+        <td rowspan=4>Site Pagination</td>
+        <td rowspan=2>Pagination</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Pagination ocurrs if more than 10 questions are listed.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Pagination Buttons</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking the buttons navigate back and forth between the pages.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+</table>
+
+
+#### About page 
+
+<table>
+    <tr>
+        <th>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=2>General</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>About page render correctly</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>General styling</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+</table>
+
+
+#### Question Detail
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=2>Page Buttons</td>
+        <td rowspan=2>Reply Question button</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking the button redirects to the Reply Question page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=14>Question</td>
+        <td rowspan=2>Score</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Score renders correctly.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Title</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Title renders correctly.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Author</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Author renders correctly.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Content</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Content renders correctly.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Last updated</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Date and time when the question was created display correctly.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Edit Question button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the button redirects to Edit Question page for the correct question.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Delete Question button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the button redirects to Delete Question page for the correct question.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+        <tr>
+        <td rowspan=12>Reply</td>
+        <td rowspan=2>Score</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Score renders correctly.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Body</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Body renders correctly.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Author</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Author renders correctly.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Last updated</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Date and time when the question was created display correctly.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Edit Reply button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the button redirects to Edit Reply page for the correct reply.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Delete Reply button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the button redirects to Delete Reply page for the correct reply.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=8>Voting</td>
+        <td rowspan=2>Queston Upvote button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the button toggle the user's upvote.<br>Score is updated by 1.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.<br>Button selection is not working correctly. Button stay selected/unselected for all users and not only for the current user.</td>
+        <td><span style="color:red">Fail</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Question Downvote button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the button toggle the user's upvote.<br>Score is updated by -1.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.<br>Button selection is not working correctly. Button stay selected/unselected for all users and not only for the current user.</td>
+        <td><span style="color:red">Fail</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Reply Upvote button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the button toggle the user's upvote.<br>Score is updated by 1.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.<br>Button selection is not working correctly. Button stay selected/unselected for all users and not only for the current user.</td>
+        <td><span style="color:red">Fail</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Reply Downvote button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the button toggle the user's upvote.<br>Score is updated by -1.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.<br>Button selection is not working correctly. Button stay selected/unselected for all users and not only for the current user.</td>
+        <td><span style="color:red">Fail</span></td>
+    </tr>
+</table>
+
+
+### Ask Question
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=8>Question Form</td>
+        <td rowspan=2>Title input</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Validation occurs if field is left empty</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Content input</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Summernote editor display correctly.<br>Text can be entered in the field.<br>Unable to validate when field is left empty. Unable to submit if this happends as form is invalid.</td>
+        <td><span style="color:red">Fail</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Submit button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the button submits the form and redirects to the Home page.<br>Submit question if valid.<br>Message inform if the from submit successfully or not.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Cancel button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the button redirects to the Home page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+</table>
+
+
+### Leave Reply
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=6>Reply Form</td>
+        <td rowspan=2>Body input</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Summernote editor display correctly.<br>Text can be entered in the field.<br>Unable to validate when field is left empty. Unable to submit if this happends as form is invalid.</td>
+        <td><span style="color:red">Fail</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Submit button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the button submits the form and redirects to the originating page.<br>Submit question if valid.<br>Message inform if the from submit successfully or not</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Cancel button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the button redirects to the Home page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+</table>
 
 [Back to top ⇧](#code-buddy)
 
