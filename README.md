@@ -572,6 +572,27 @@ Page | Desktop | Mobile |
 
 ## Credits
 
+### Content
+
+* Website content was written by the developer.
+* Example questions and replies were taken from [Stack Overflow](https://stackoverflow.com/)-
+
+### Media
+
+* [Pexels](https://www.pexels.com/)
+
+    * About Page image: Taken by [Buro Millennial](https://www.pexels.com/@buro-millennial-636760/).
+
+* [Unsplash](https://unsplash.com/)
+
+    * 404 Error Page image: Taken by [Tai Bui](https://unsplash.com/@agforl24).
+
+### Code
+
+* [Stack Overflow](https://stackoverflow.com/) and [W3Schools](https://www.w3schools.com/) were consulted on a regular basis for inspiration and sometimes to be able to better understand the code being implement.
+
+* Message implementation an dismissal code is taken from [Code Institute](https://codeinstitute.net/)'s django-blog project.
+
 [Back to top ⇧](#code-buddy)
 
 ## Known Bugs
@@ -580,10 +601,18 @@ Page | Desktop | Mobile |
 
 * The same applies for pagination is Search Results page which is currently not working.
 
-* A known issue with Summernote field validation is present in the project. An invalid form will be posted if the field is empty. A message will however be displayed, informing the user that there has been a problem with the submition.
+* A known issue with Summernote field validation is present in the project. An invalid form will be posted if the field is empty. A message will however be displayed, informing the user that there has been a problem with the submission.
 
 [Back to top ⇧](#code-buddy)
 
 ## Acknowledgements
+
+* My partner, for her unconditional love, help and continued support in all aspects of life, specially when I did not have time for anything else than to work with this project. You made it possible!
+
+* My friend, Miguel, for being always there to help, no matter what time of the day.
+
+* My tutor, Marcel, for his invaluable support, feedback and guidance through the whole process.
+
+* Code Institute and its amazing Slack community for their support and providing me with the necessary knowledge to complete this project.
 
 [Back to top ⇧](#code-buddy)
