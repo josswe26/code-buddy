@@ -24,6 +24,18 @@ Visit the deployed website [here](https://django-code-buddy.herokuapp.com/).
     4. [Skeleton](#skeleton)
     5. [Surface](#surface)
 2. [Features](#features)
+    1. [General](#general)
+    2. [Home Page](#home-page)
+    3. [About Page](#about-page)
+    4. [Search Results Page](#search-results-page)
+    5. [Question Detail Page](#question-detail-page)
+    6. [Ask Question Page](#ask-question-page)
+    7. [Leave Reply Page](#leave-reply-page)
+    8. [Edit Question Page](#edit-question-page)
+    9. [Delete Question Page](#delete-question-page)
+    10. [Edit Reply Page](#edit-reply-page)
+    11. [Delete Reply Page](#delete-reply-page)
+    12. [Authentication Pages](#authentication-pages)
 3. [Technologies Used](#technologies-used)
 4. [Testing](#testing)
     1. [Go to TESTING.md](https://github.com/josswe26/code-buddy/blob/main/TESTING.md#code-buddy-testing)
@@ -236,6 +248,119 @@ Nunito and Roboto were chosen after some research on fonts that are better for r
 
 
 ## Features
+
+### General
+
+* The website has been designed from a mobile first perspective.
+
+* Responsive design across all device sizes.
+
+* Navigation Bar
+![Code Buddy Navigation Bar image](assets/readme_files/code_buddy_navbar.png)
+
+    *  Contains the main logo and section links.
+
+    * The navigation bar contains links to all sections to facilitate navigation across the site. It also has a hover effect that changes color to provide feedback to the Site User for a better user experience.
+
+* Search bar
+![Code Buddy Search Bar image](assets/readme_files/code_buddy_search_bar.png)
+
+    * Provide the Site User an input field and a Search button to be able to search for specific questions.
+
+* Footer
+  ![Code Buddy Footer image](assets/readme_files/code_buddy_footer.png)
+
+    * The footer includes a logo and link to social media channels.
+
+
+### Home Page
+
+* Question list
+![Code Buddy Question List image](assets/readme_files/code_buddy_question_list.png)
+
+    * Display a paginated list of all the question and its relevant information for the user to identify.
+
+    * Provide the Site User with a link to the detailed question.
+
+    * Question score as well as voting possibilities for registered users is provided next to the question.
+
+    * For registered users, a Ask Question button is provided to allow the user to access the Ask Question Page to create new questions.
+
+    * Edit and Question buttons are provided for the questions the registered Site User has created.
+
+
+### About Page
+
+![Code Buddy About Page image](assets/readme_files/code_buddy_about.png)
+
+* Provide relevant information about the website's objective.
+
+
+### Search Results Page
+![Code Buddy About Page image](assets/readme_files/code_buddy_search_results.png)
+
+* Display information about the Search being handled
+
+* Display a paginated list of the questions matching the search and its relevant information for the user to identify.
+
+
+### Question Detail Page
+![Code Buddy Question Detail Page image](assets/readme_files/code_buddy_question_detail.png)
+
+* Display the full question a well as a list of its replies.
+
+* Question and reply scores as well as voting possibilities for registered users is provided next to each item.
+
+* For registered users, a Leave Reply button is provided to allow the user to access the Leave Reply page to create a new reply to the question.
+
+ * Edit and Question buttons are provided for the questions and replies the registered Site User has created.
+
+
+### Ask Question Page
+![Code Buddy Ask Question Page](assets/readme_files/code_buddy_ask_question.png)
+
+* Provide a form to allow registered Site Users to create a new question.
+
+### Leave Reply Page
+![Code Buddy Leave Reply Page](assets/readme_files/code_buddy_leave_reply.png)
+
+* Provide a form to allow registered Site Users to create a new reply to the questions.
+
+
+### Edit Question Page
+![Code Buddy Edit Question Page](assets/readme_files/code_buddy_edit_question.png)
+
+* Provide a prepopulated form to allow the Site User to edit a question they created.
+
+
+### Delete Question Page
+![Code Buddy Edit Question Page](assets/readme_files/code_buddy_delete_question.png)
+
+* Provide a form to allow the Site User to delete a question they created.
+
+
+### Edit Reply Page
+![Code Buddy Edit Question Page](assets/readme_files/code_buddy_edit_reply.png)
+
+* Provide a prepopulated form to allow the Site User to edit a reply they created.
+
+
+### Delete Reply Page
+![Code Buddy Edit Question Page](assets/readme_files/code_buddy_delete_reply.png)
+
+* Provide a form to allow the Site User to delete a reply they created.
+
+
+### Authentication Pages
+
+Page | Purpose | Image |
+--- | --- | --- |
+Register | Allow the Site User to sign up an account for the website. | ![Code Buddy Sign Up Page](assets/readme_files/code_buddy_sing_up.png) |
+Login | Allow the Site User to sign in with their account. | ![Code Buddy Sign In Page](assets/readme_files/code_buddy_sign_in.png) |
+Logout | Allow the Site User to sign out from their account. | ![Code Buddy Sign Out Page](assets/readme_files/code_buddy_sign_out.png) |
+
+
+
 
 [Back to top ⇧](#code-buddy)
 
