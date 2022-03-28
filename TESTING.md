@@ -125,7 +125,7 @@
 * The question title in the Question List page is provided as a link so that Site Users can access the Question Detail page for each specific question.
 
 
-### 12. As a Site User I can view the replies a question received so that I can find a solutions to the question
+### 12. As a Site User I can view the replies a question received so that I can find a solution to the question
 
 * Question's replies are being listed inside the Question Detail page for each specific question under the question content.
 
@@ -160,7 +160,7 @@ The errors were solved by removing the aria-label attribute from the nav, as wel
 
 
 
-W3C Markup Validator also found a great amount of errors in pages with user input. However I found those errors to be coming from the Summernote editor. See example below:
+W3C Markup Validator also found a great amount of errors in pages with user input. However, I found those errors to be coming from the Summernote editor. See example below:
 
 ![Summernote HTML errors image](assets/testing_files/summernote_errors.jpg)
 
@@ -360,7 +360,7 @@ iPhone 7 | iOS 15 |No appearance, responsiveness nor functionality issues. | <sp
         <td rowspan=2>Input field</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
-        <td>Pleaceholder "Search Question" shows as expected.<br>Text can be entered in the field.</td>
+        <td>Placeholder "Search Question" shows as expected.<br>Text can be entered in the field.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -569,7 +569,7 @@ iPhone 7 | iOS 15 |No appearance, responsiveness nor functionality issues. | <sp
         <td rowspan=2>Pagination</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
-        <td>Pagination ocurrs if more than 10 questions are listed.</td>
+        <td>Pagination occurs if more than 10 questions are listed.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -592,7 +592,7 @@ iPhone 7 | iOS 15 |No appearance, responsiveness nor functionality issues. | <sp
 </table>
 
 
-#### About page 
+#### About Page 
 
 <table>
     <tr>
@@ -617,7 +617,131 @@ iPhone 7 | iOS 15 |No appearance, responsiveness nor functionality issues. | <sp
 </table>
 
 
-#### Question Detail
+#### Search Results Page
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=2>General</td>
+        <td rowspan=2>Main Title</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Title display correct information depending on the results.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=12>Question</td>
+        <td rowspan=2>Score</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Score renders correctly.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Title link</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Title renders correctly.<br>Clicking the link redirects to Question Detail page for the correct question.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Author</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Author renders correctly.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Last updated</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Date and time when the question was created display correctly.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Edit Question button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the button redirects to Edit Question page for the correct question.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Delete Question button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the button redirects to Delete Question page for the correct question.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=4>Site Pagination</td>
+        <td rowspan=2>Pagination</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Pagination is not occurring if more than 10 questions are listed.</td>
+        <td><span style="color:red">Fail</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Pagination Buttons</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+</table>
+
+
+#### Question Detail Page
 
 <table>
     <tr>
@@ -850,7 +974,7 @@ iPhone 7 | iOS 15 |No appearance, responsiveness nor functionality issues. | <sp
 </table>
 
 
-#### Ask Question
+#### Ask Question Page
 
 <table>
     <tr>
@@ -877,19 +1001,19 @@ iPhone 7 | iOS 15 |No appearance, responsiveness nor functionality issues. | <sp
         <td rowspan=2>Content input</td>
         <td rowspan=2>Registered</td>
         <td>Functionality</td>
-        <td>Summernote editor display correctly.<br>Text can be entered in the field.<br>Unable to validate when field is left empty. Unable to submit if this happends as form is invalid.</td>
+        <td>Summernote editor display correctly.<br>Text can be entered in the field.<br>Unable to validate when field is left empty. Unable to submit if this happens as form is invalid.</td>
         <td><span style="color:red">Fail</span></td>
     </tr>
     <tr>
         <td>Style</td>
-        <td>Focus effect working as expected.</td>
+        <td>Styled correctly by Summernote CSS code.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
         <td rowspan=2>Submit button</td>
         <td rowspan=2>Registered</td>
         <td>Functionality</td>
-        <td>Clicking the button submits the form and redirects to the Home page.<br>Submit question if valid.<br>Message inform if the from submit successfully or not.</td>
+        <td>Clicking the button submit the form and redirects to the Home page.<br>Submit question if valid.<br>Display message if the form submits successfully or not.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -912,7 +1036,7 @@ iPhone 7 | iOS 15 |No appearance, responsiveness nor functionality issues. | <sp
 </table>
 
 
-#### Leave Reply
+#### Leave Reply Page
 
 <table>
     <tr>
@@ -932,14 +1056,14 @@ iPhone 7 | iOS 15 |No appearance, responsiveness nor functionality issues. | <sp
     </tr>
     <tr>
         <td>Style</td>
-        <td>Focus effect working as expected.</td>
+        <td>Styled correctly by Summernote CSS code.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
         <td rowspan=2>Submit button</td>
         <td rowspan=2>Registered</td>
         <td>Functionality</td>
-        <td>Clicking the button submits the form and redirects to the originating page.<br>Submit question if valid.<br>Message inform if the from submit successfully or not</td>
+        <td>Clicking the button submit the form and redirects to the originating page.<br>Submit question if valid.<br>Display message if the form submits successfully or not</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -952,6 +1076,334 @@ iPhone 7 | iOS 15 |No appearance, responsiveness nor functionality issues. | <sp
         <td rowspan=2>Registered</td>
         <td>Functionality</td>
         <td>Clicking the button redirects to the Home page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+</table>
+
+
+#### Edit Question Page
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=6>Question Form</td>
+        <td rowspan=2>Title input</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td><br>Text in the field is being prepopulated correctly.<br>Text can be edited.<br>Validation occurs if field is left empty</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Content input</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Summernote editor display correctly.<br>Text in the field is being prepopulated correctly.<br>Text can be edited.<br>Unable to validate when field is left empty. Unable to submit if this happends as form is invalid.</td>
+        <td><span style="color:red">Fail</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Styled correctly by Summernote CSS code.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Submit button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the button submit the form and redirects to the Home page.<br>Edit question if form is valid.<br>Display message if the question is edit successfully or not.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+</table>
+
+
+#### Delete Question Page
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+    <tr>
+        <td rowspan=6>Delete Form</td>
+        <td rowspan=2>Question Title</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Question title renders correctly.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Yes button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the button submit the form and redirects to the Home page.<br>Question get deleted.<br>Display message if the question is deleted successfully or not.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>No button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the button redirects to the Home page without deleting the question.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+</table>
+
+
+#### Edit Reply Page
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=4>Reply Form</td>
+        <td rowspan=2>Content input</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Summernote editor display correctly.<br>Text in the field is being prepopulated correctly.<br>Text can be edited.<br>Unable to validate when field is left empty. Unable to submit if this happends as form is invalid.</td>
+        <td><span style="color:red">Fail</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Styled correctly by Summernote CSS code.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Submit button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the button submit the form and redirects to the originating page.<br>Edit question if form is valid.<br>Display message if the reply is edit successfully or not.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+</table>
+
+
+#### Delete Reply Page
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=4>Delete Form</td>
+        <td rowspan=2>Yes button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the button submit the form and redirects to the originating page.<br>Reply get deleted.<br>Display message if the reply is deleted successfully or not.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>No button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the redirects to the originating page without deleting the reply.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+</table>
+
+
+#### Sign Up Page
+
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=10>Sign Up Form</td>
+        <td rowspan=2>Username input</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Field validates input to be present.<br>Display message if the username already exist.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>E-mail input</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Optional field. Allow to be left empty<br>Validate input is an email address.<br>Display message if the e-mail already exists.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Password input</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Field validates input to be present.<br>Validate input is a valid password.<br>Display message if password is not valid.<br>Display message if both passwords are not equal.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Password Repeat input</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Field validates input to be present.<br>Validate input is a valid password<br>Display message if password is not valid<br>Display message if both passwords are not equal</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Sign Up button</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking the button submit the form and redirects to the Home page.<br>Create user if form is valid.<br>Display message if user is successfully created.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+</table>
+
+
+#### Login Page
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=6>Sign In Form</td>
+        <td rowspan=2>Username input</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Field validates input to be present.<br>Display message if the username doesn't exist.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Password input</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Field validates input to be present.<br>Display message if password is not valid.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Sign In button</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking the button authenticates the user and redirect to the Home page.<br>Display message if credentials are not valid.<br>Display message if user login successfully.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+</table>
+
+
+#### Logout Page
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=2>Sign Out Form</td>
+        <td rowspan=2>Submit button</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking the button sign out the user and redirect to the Home page.<br>Display message if user logout successfully.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
