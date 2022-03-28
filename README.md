@@ -47,7 +47,8 @@ Visit the deployed website [here](https://django-code-buddy.herokuapp.com/).
 5. [Deployment](#deployment)
 6. [Finished Product](#finished-product)
 7. [Credits](#credits)
-8. [Acknowledgements](#acknowledgements)
+8. [Known Bugs](#known-bugs)
+9. [Acknowledgements](#acknowledgements)
 
 
 ***
@@ -498,6 +499,16 @@ Page | Desktop | Mobile |
 [Back to top ⇧](#code-buddy)
 
 ## Credits
+
+[Back to top ⇧](#code-buddy)
+
+## Known Bugs
+
+* Upvote/downvote button selection stay the same for all users. This do to an error in the logic. Even though the developer has an idea on how to solve the issue. The solution is yet to be implemented due lack of time.
+
+* The same applies for pagination is Search Results page which is currently not working.
+
+* A known issue with Summernote field validation is present in the project. An invalid form will be posted if the field is empty. A message will however be displayed, informing the user that there has been a problem with the submition.
 
 [Back to top ⇧](#code-buddy)
 
