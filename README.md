@@ -37,6 +37,11 @@ Visit the deployed website [here](https://django-code-buddy.herokuapp.com/).
     11. [Delete Reply Page](#delete-reply-page)
     12. [Authentication Pages](#authentication-pages)
 3. [Technologies Used](#technologies-used)
+    1. [Languages Used](#languages-used)
+    2. [Libraries and Frameworks](#languages-and-frameworks)
+    3. [Packages / Dependecies Installed](#packages--dependecies-installed)
+    4. [Database Management](#database-management)
+    5. [Tools and Programs](#tools-and-programs)
 4. [Testing](#testing)
     1. [Go to TESTING.md](https://github.com/josswe26/code-buddy/blob/main/TESTING.md#code-buddy-testing)
 5. [Deployment](#deployment)
@@ -360,11 +365,102 @@ Login | Allow the Site User to sign in with their account. | ![Code Buddy Sign I
 Logout | Allow the Site User to sign out from their account. | ![Code Buddy Sign Out Page](assets/readme_files/code_buddy_sign_out.png) |
 
 
-
-
 [Back to top ⇧](#code-buddy)
 
+
 ## Technologies Used
+
+### Languages Used
+
+* [HTML5](https://en.wikipedia.org/wiki/HTML)
+* [CSS3](https://en.wikipedia.org/wiki/CSS)
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+
+### Libraries and Frameworks
+
+* [Django](https://www.djangoproject.com/)   
+    * Django was used as web framework.
+
+* [Django Template](https://jinja.palletsprojects.com)  
+    * Django Template was used as a templating language for Django to display backend data to HTML.
+   
+* [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)  
+    * Bootstrap 5 was used throughout the website to help with styling and responsiveness.
+
+* [Google Fonts](https://fonts.google.com)  
+    * Google fonts was used to import the fonts into the html file, and were used on all parts of the site.
+
+* [Font Awesome](https://fontawesome.com)  
+    * Font Awesome was used throughout the website to add icons for aesthetic and UX purposes. 
+
+* [jQuery 3.6.0](https://jquery.com/)  
+    * jQuery was used as a JavaScript library to help writing less JavaScript code.  
+
+
+### Packages / Dependecies Installed
+
+* [Django Allauth](https://django-allauth.readthedocs.io/en/latest/)  
+    * Django Allauth was used for user authentication, registration, and account management.
+
+* [Django Crispy Form](https://django-crispy-forms.readthedocs.io/en/latest/)   
+    * Django Crispy Form was used to control the rendering of the forms. 
+ 
+* [Gunicorn](https://gunicorn.org/)  
+    * Gunicorn was used as Python WSGI HTTP Server for UNIX to support the deployment of Django application.  
+
+* [Summernote](https://summernote.org/) 
+    * Summernote has been used as WYSIWYG editor.
+
+* [Cloudinary](https://cloudinary.com/)
+    * Cloudinary has been used as image management solution
+
+### Database Management
+* [Heroku Postgres](https://www.heroku.com/postgres)   
+    * Heroku Postgres database was used in production, as a service based on PostgreSQL provided by Heroku.
+
+
+### Tools and Programs
+
+* [Git](https://git-scm.com)  
+    * Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub. 
+
+* [GitPod](https://gitpod.io/)
+     * GitPod was used for writing code, committing, and then pushing to GitHub.
+
+* [GitHub](https://github.com)  
+   GitHub was used to store the projects code after being pushed from Git. 
+
+* [Heroku](https://www.heroku.com)   
+    * Heroku was used to deploy the website.
+
+* [Am I Responsive](ami.responsivedesign.is)  
+    * Am I Responsive was used to preview the website across a variety of popular devices.
+
+* [Tiny PNG](https://tinypng.com)    
+    * Tiny PNG was used to reduce the file size of the images.
+
+* [Coolors](https://coolors.co)  
+    * Coolors was used to create a color scheme for the website.
+
+* [Balsamiq](https://balsamiq.com/)
+     * Balsamiq was used to create the wireframes during the design phase of the project
+
+* [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
+    * Chrome DevTools was used during development process for code review and to test responsiveness.
+
+* [W3C Markup Validator](https://validator.w3.org/)
+    * W3C Markup Validator was used to validate the HTML code.
+
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+    * W3C CSS Validator was used to validate the CSS code.
+
+* [JSHint](https://jshint.com/) 
+    * The JSHints JavaScript Code Quality Tool was used to validate the site's JavaScript code.
+
+* [Favicon.cc](https://www.favicon.cc/) 
+    * Favicon.cc was used to create the site favicon.
 
 [Back to top ⇧](#code-buddy)
 
