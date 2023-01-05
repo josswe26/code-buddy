@@ -8,7 +8,7 @@ Code Buddy is a website created to allow developers to ask questions and receive
 
 The main objective of the site is to allow developers to share knowledge and ideas, collaborate and help each other to find solutions to the problems they face. This is achieved by providing a platform of questions and answers, where users can search for the information they are looking for. Developers are also able to upvote or downvote the questions and answers in order to assure that relevant content gets highlighted.
 
-Visit the deployed website [here](https://django-code-buddy.herokuapp.com/).
+Visit the deployed website [here](https://code-buddy.onrender.com).
 
 
 ## Table of Contents
