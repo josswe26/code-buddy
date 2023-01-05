@@ -1,1 +1,0 @@
-web: gunicorn code_buddy.wsgi
